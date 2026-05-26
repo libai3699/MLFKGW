@@ -49,6 +49,56 @@ const assets = [
   ['/content/dam/images/sustainability-esg/2025/bg-nav-section-4.jpg', 'images/sustainability/bg-nav-section-4.jpg'],
   ['/content/dam/images/sustainability-esg/2025/bg-nav-section-5.jpg', 'images/sustainability/bg-nav-section-5.jpg'],
   ['/content/dam/images/static/watermark.jpg', 'images/sustainability/watermark.jpg'],
+  ['/content/dam/artisan-portal/static/bg-careers-small.jpg', 'images/bg-careers-small.jpg'],
+  ['/content/dam/images/careers/profile-7.jpg', 'images/careers/profile-7.jpg'],
+  ['/content/dam/images/careers/ankur-patel-profile-15.jpg', 'images/careers/ankur-patel-profile-15.jpg'],
+  ['/content/dam/images/careers/profile-11.jpg', 'images/careers/profile-11.jpg'],
+  ['/content/dam/images/careers/key-business-areas-716x498.jpg', 'images/careers/key-business-areas-716x498.jpg'],
+  ['/content/dam/images/careers/career-opportunities-v3-716x498.jpg', 'images/careers/career-opportunities-v3-716x498.jpg'],
+  ['/content/dam/images/careers/benefits-and-rewards-at-work-716x498.jpg', 'images/careers/benefits-and-rewards-at-work-716x498.jpg'],
+  ['/content/dam/images/careers/financial-wellness-266x317.jpg', 'images/careers/financial-wellness-266x317.jpg'],
+  ['/content/dam/images/careers/life-wellness-benefits-266x317.jpg', 'images/careers/life-wellness-benefits-266x317.jpg'],
+  ['/content/dam/images/careers/life-at-artisan-partners-347x241_360.jpg', 'images/careers/life-at-artisan-partners-347x241_360.jpg'],
+  ['/content/dam/images/careers/bg-downtown-milwaukee-824x174.jpg', 'images/careers/bg-downtown-milwaukee-824x174.jpg'],
+  ['/content/dam/images/careers/bg-womens-network-event-824x174.jpg', 'images/careers/bg-womens-network-event-824x174.jpg'],
+  ['/content/dam/images/careers/community-connection-and-impact.jpg', 'images/careers/community-connection-and-impact.jpg'],
+  [
+    '/content/dam/documents/legal/privacy-policy/Privacy-Notice-for-California-Residents.pdf',
+    'content/dam/documents/legal/privacy-policy/Privacy-Notice-for-California-Residents.pdf',
+  ],
+  [
+    '/content/dam/documents/legal/APLP-Form-ADV-CRS.pdf',
+    'content/dam/documents/legal/APLP-Form-ADV-CRS.pdf',
+  ],
+  ['/content/dam/images/logo/logo.png', 'images/investor/logo.png'],
+  [
+    '/content/dam/images/carousel/carousel-home-lipper-award-GBLV-SELEQ-1800x280.jpg',
+    'images/investor/carousel-home-lipper-award-GBLV-SELEQ-1800x280.jpg',
+  ],
+  [
+    '/content/dam/images/carousel/carousel-bryan-krug-2025-morningstar-award-1800x280.jpg',
+    'images/investor/carousel-bryan-krug-2025-morningstar-award-1800x280.jpg',
+  ],
+  [
+    '/etc/designs/artisanpartners/clientlibs_base/images/footer-bg.png',
+    'images/investor/footer-bg.png',
+  ],
+  [
+    '/content/dam/images/investor-updates/artisan-partners-investor-update.jpg',
+    'images/investor/artisan-partners-investor-update.jpg',
+  ],
+  [
+    '/content/dam/images/pm-viewpoints/INTV-bloomberg-surveillance-feat-Samra-Aprl-2026.jpg',
+    'images/investor/INTV-bloomberg-surveillance-feat-Samra-Aprl-2026.jpg',
+  ],
+  [
+    '/content/dam/images/insights/gss-citywire-pro-buyer-website-thumbnail-764x430.jpg',
+    'images/investor/gss-citywire-pro-buyer-website-thumbnail-764x430.jpg',
+  ],
+  [
+    '/content/dam/images/banners/home-side-bar-image-canvas-blog-285x160.png',
+    'images/investor/home-side-bar-image-canvas-blog-285x160.png',
+  ],
 ];
 
 const flags = ['us', 'au', 'at', 'be', 'ca', 'dk', 'fi', 'fr', 'de', 'is'];

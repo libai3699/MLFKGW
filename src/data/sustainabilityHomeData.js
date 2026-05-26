@@ -56,21 +56,6 @@ export const sustainabilityNavCards = [
 ];
 
 export const sustainabilityFooter = {
-  links: [
-    { label: 'Legal Information', href: '/legal-information.html' },
-    { label: 'Privacy Policy', href: '/privacy-policy.html' },
-    { label: 'Cookies Policy', href: '/cookies-policy.html' },
-    {
-      label: 'California Privacy Policy',
-      href: '/content/dam/documents/legal/privacy-policy/Privacy-Notice-for-California-Residents.pdf',
-      external: true,
-    },
-    {
-      label: 'Form CRS',
-      href: '/content/dam/documents/legal/APLP-Form-ADV-CRS.pdf',
-      external: true,
-    },
-  ],
   paragraphs: [
     'Artisan Partners is an independent investment management firm focused on providing high value-added, active investment strategies to sophisticated clients globally. Artisan Partners Limited Partnership (APLP) is an investment adviser registered with the U.S. Securities and Exchange Commission (SEC). Artisan Partners UK LLP (APUK) is authorized and regulated by the Financial Conduct Authority and is a registered investment adviser with the SEC. APEL Financial Distribution Services Limited (AP Europe) is regulated by the Central Bank of Ireland. APLP, APUK and AP Europe are collectively, with their parent company and affiliates, referred to as Artisan Partners herein.',
     'This website does not constitute an offer or recommendation by Artisan Partners of securities or services to, or a solicitation by Artisan Partners of an offer to buy securities or services from, any person residing in a jurisdiction in which such an offer or solicitation would be unlawful under the applicable laws and regulations. Material on this website are provided for informational purposes without regard to your particular investment needs. This material shall not be construed as investment or tax advice on which you may rely for your investment decisions. Investors should consult their financial and tax adviser before making investments in order to determine the appropriateness of any investment product discussed herein.',

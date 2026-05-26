@@ -1,56 +1,86 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { investorSections } from '../../data/siteData';
 
-function CountryDropdown({ countries, selectedCountry, onSelect }) {
+function CountryFlag({ country }) {
+  if (country.noFlag) {
+    return null;
+  }
+
+  return (
+    <img
+      src={`https://flagcdn.com/${country.code}.svg`}
+      alt=""
+      width={20}
+      height={15}
+    />
+  );
+}
+
+function CountryOption({ country }) {
+  return (
+    <span className="country-option-content">
+      <CountryFlag country={country} />
+      <span className="country-name">{country.name}</span>
+    </span>
+  );
+}
+
+function CountryDropdown({ countries, selectedCountry, onSelect, disabled = false }) {
   const [open, setOpen] = useState(false);
   const current = selectedCountry || countries[0];
+  const canToggle = countries.length > 1 && !disabled;
+  const listCountries = countries.filter((country) => country.code !== current.code);
+
+  useEffect(() => {
+    if (disabled) {
+      setOpen(false);
+    }
+  }, [disabled]);
+
+  const handleToggle = (event) => {
+    event.preventDefault();
+    if (canToggle) {
+      setOpen((value) => !value);
+    }
+  };
 
   return (
     <div className="country-selector">
-      <ul
-        className={`dropdown selected ${open ? 'active' : ''}`}
-        onClick={() => setOpen((value) => !value)}
-        onKeyDown={(event) => {
-          if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            setOpen((value) => !value);
-          }
-        }}
-        role="button"
-        tabIndex={0}
+      <button
+        type="button"
+        className={`dropdown selected ${open ? 'active' : ''} ${canToggle ? '' : 'single-country'}`}
+        onClick={handleToggle}
+        disabled={!canToggle}
+        aria-expanded={canToggle ? open : undefined}
+        aria-haspopup={canToggle ? 'listbox' : undefined}
       >
-        <li>
-          {!current.noFlag && (
-            <img src={`/images/flags/${current.code}.svg`} alt={current.name} />
-          )}
-          <a href={current.href}>{current.name}</a>
-        </li>
-      </ul>
+        <CountryOption country={current} />
+      </button>
       <AnimatePresence>
-        {open && (
+        {open && canToggle && (
           <motion.ul
             className="dropdown-list active"
+            role="listbox"
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 150 }}
+            animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25 }}
+            transition={{ duration: 0.2 }}
           >
-            {countries.map((country) => (
-              <li key={country.name}>
-                {!country.noFlag && (
-                  <img src={`/images/flags/${country.code}.svg`} alt={country.name} />
-                )}
-                <a
-                  href={country.href}
+            {listCountries.map((country) => (
+              <li key={country.code}>
+                <button
+                  type="button"
+                  className="country-option-button"
                   onClick={(event) => {
                     event.preventDefault();
                     onSelect(country);
                     setOpen(false);
                   }}
                 >
-                  {country.name}
-                </a>
+                  <CountryOption country={country} />
+                </button>
               </li>
             ))}
           </motion.ul>
@@ -60,8 +90,29 @@ function CountryDropdown({ countries, selectedCountry, onSelect }) {
   );
 }
 
-function AccordionItem({ section, isOpen, onToggle }) {
+function AccordionItem({ section, isOpen, onToggle, onClose }) {
+  const navigate = useNavigate();
   const [selectedCountry, setSelectedCountry] = useState(section.countries[0]);
+  const [isContinuing, setIsContinuing] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) {
+      setIsContinuing(false);
+    }
+  }, [isOpen]);
+
+  const handleContinue = (event) => {
+    event.preventDefault();
+    if (isContinuing) {
+      return;
+    }
+
+    setIsContinuing(true);
+    window.setTimeout(() => {
+      onClose();
+      navigate(selectedCountry.href);
+    }, 750);
+  };
 
   return (
     <div className="accordion-item">
@@ -85,7 +136,7 @@ function AccordionItem({ section, isOpen, onToggle }) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
-            <div className="accordion-body">
+            <div className={`accordion-body ${isContinuing ? 'is-continuing' : ''}`}>
               <p>{section.description}</p>
               <p>
                 <strong>Select your country</strong>
@@ -94,15 +145,26 @@ function AccordionItem({ section, isOpen, onToggle }) {
                 countries={section.countries}
                 selectedCountry={selectedCountry}
                 onSelect={setSelectedCountry}
+                disabled={isContinuing}
               />
-              <motion.a
-                className="btn btn-primary"
-                href={selectedCountry.href}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <motion.button
+                type="button"
+                className={`btn btn-primary ${isContinuing ? 'is-loading' : ''}`}
+                onClick={handleContinue}
+                disabled={isContinuing}
+                aria-busy={isContinuing}
+                whileHover={isContinuing ? undefined : { scale: 1.02 }}
+                whileTap={isContinuing ? undefined : { scale: 0.98 }}
               >
-                Continue
-              </motion.a>
+                {isContinuing ? (
+                  <span className="investor-continue-state">
+                    <span className="investor-continue-spinner" aria-hidden="true" />
+                    <span>Continuing...</span>
+                  </span>
+                ) : (
+                  'Continue'
+                )}
+              </motion.button>
             </div>
           </motion.div>
         )}
@@ -190,6 +252,7 @@ export default function InvestorModal({ isOpen, onClose, activeSection }) {
                       section={section}
                       isOpen={openSection === section.id}
                       onToggle={handleToggle}
+                      onClose={onClose}
                     />
                   ))}
                 </div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import AboutAwareLink from '../InvestorSite/AboutAwareLink';
 import { overviewIntro } from '../../data/overviewData';
 
 function renderParagraph(paragraph, index) {
@@ -12,7 +12,7 @@ function renderParagraph(paragraph, index) {
   return (
     <p key={index}>
       {parts[0]}
-      <Link to={paragraph.link.href}>{paragraph.link.label}</Link>
+      <AboutAwareLink to={paragraph.link.href}>{paragraph.link.label}</AboutAwareLink>
       {parts[1]}
     </p>
   );

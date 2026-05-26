@@ -48,6 +48,15 @@ export default function Navigation({ isHome }) {
   };
 
   const isActive = (item) => {
+    if (item.slug === 'news') {
+      return location.pathname === '/news';
+    }
+    if (item.slug === 'careers') {
+      return location.pathname.startsWith('/careers');
+    }
+    if (item.slug === 'contact-us') {
+      return location.pathname === '/contact-us' || location.pathname === '/contact-us.html';
+    }
     if (item.slug === 'about-us') {
       return location.pathname.startsWith('/about-us') || location.pathname.startsWith('/sustainability');
     }

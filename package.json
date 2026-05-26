@@ -8,7 +8,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "download-assets": "node scripts/download-assets.js"
+    "download-assets": "node scripts/download-assets.js",
+    "download-sustainability-assets": "node scripts/download-sustainability-assets.mjs",
+    "build:sustainability-content": "node scripts/build-sustainability-content.mjs",
+    "build:news-data": "node scripts/build-news-data.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",

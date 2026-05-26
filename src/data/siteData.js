@@ -1,3 +1,5 @@
+import { footerLinks } from './legalPagesData';
+
 export const navItems = [
   {
     title: 'About Us',
@@ -11,7 +13,7 @@ export const navItems = [
       { label: 'Sustainability', href: '/sustainability/home' },
     ],
   },
-  { title: 'News', slug: 'news', href: '/news.html' },
+  { title: 'News', slug: 'news', href: '/news' },
   {
     title: 'Investor Relations',
     slug: 'investor-relations',
@@ -23,14 +25,14 @@ export const navItems = [
     slug: 'careers',
     menuAlign: 'right',
     children: [
-      { label: 'Our People', href: '/careers/our-people.html' },
-      { label: 'Key Business Areas', href: '/careers/key-business-areas.html' },
-      { label: 'Career Opportunities', href: '/careers/career-opportunities.html' },
-      { label: 'Benefits & Rewards at Work', href: '/careers/benefits-and-rewards-at-work.html' },
-      { label: 'Life at Artisan Partners', href: '/careers/life-at-artisan-partners.html' },
+      { label: 'Our People', href: '/careers/our-people' },
+      { label: 'Key Business Areas', href: '/careers/key-business-areas' },
+      { label: 'Career Opportunities', href: '/careers/career-opportunities' },
+      { label: 'Benefits & Rewards at Work', href: '/careers/benefits-and-rewards-at-work' },
+      { label: 'Life at Artisan Partners', href: '/careers/life-at-artisan-partners' },
     ],
   },
-  { title: 'Contact Us', slug: 'contact-us', href: '/contact-us.html' },
+  { title: 'Contact Us', slug: 'contact-us', href: '/contact-us' },
 ];
 
 export const introText =
@@ -50,31 +52,39 @@ export const promo = {
   href: 'https://www.artisancanvas.com',
 };
 
+export function resolveInvestorHref(path) {
+  if (/^https?:\/\//i.test(path)) {
+    return path;
+  }
+
+  return path.startsWith('/') ? path : `/${path}`;
+}
+
 const allCountries = [
-  { code: 'us', name: 'United States', href: '/institutional-investors.html' },
-  { code: 'au', name: 'Australia', href: '/global/aus.html' },
-  { code: 'at', name: 'Austria', href: '/global/aut.html' },
-  { code: 'be', name: 'Belgium', href: '/global/bel.html' },
-  { code: 'ca', name: 'Canada', href: '/global/can.html' },
-  { code: 'dk', name: 'Denmark', href: '/global/dnk.html' },
-  { code: 'fi', name: 'Finland', href: '/global/fin.html' },
-  { code: 'fr', name: 'France', href: '/global/fra.html' },
-  { code: 'de', name: 'Germany', href: '/global/deu.html' },
-  { code: 'is', name: 'Iceland', href: '/global/isl.html' },
-  { code: 'ie', name: 'Ireland', href: '/global/irl.html' },
-  { code: 'it', name: 'Italy', href: '/global/ita.html' },
-  { code: 'li', name: 'Liechtenstein', href: '/global/lie.html' },
-  { code: 'lu', name: 'Luxembourg', href: '/global/lux.html' },
-  { code: 'nl', name: 'Netherlands', href: '/global/nld.html' },
-  { code: 'nz', name: 'New Zealand', href: '/global/nzl.html' },
-  { code: 'no', name: 'Norway', href: '/global/nor.html' },
-  { code: 'sg', name: 'Singapore', href: '/global/sgp.html' },
-  { code: 'za', name: 'South Africa', href: '/global/zaf.html' },
-  { code: 'es', name: 'Spain', href: '/global/esp.html' },
-  { code: 'se', name: 'Sweden', href: '/global/swe.html' },
-  { code: 'ch', name: 'Switzerland', href: '/global/che.html' },
-  { code: 'gb', name: 'United Kingdom', href: '/global/gbr.html' },
-  { code: 'other', name: 'Other', href: '/global/oth.html', noFlag: true },
+  { code: 'us', name: 'United States', href: '/institutional-investors' },
+  { code: 'au', name: 'Australia', href: '/global/aus' },
+  { code: 'at', name: 'Austria', href: '/global/aut' },
+  { code: 'be', name: 'Belgium', href: '/global/bel' },
+  { code: 'ca', name: 'Canada', href: '/global/can' },
+  { code: 'dk', name: 'Denmark', href: '/global/dnk' },
+  { code: 'fi', name: 'Finland', href: '/global/fin' },
+  { code: 'fr', name: 'France', href: '/global/fra' },
+  { code: 'de', name: 'Germany', href: '/global/deu' },
+  { code: 'is', name: 'Iceland', href: '/global/isl' },
+  { code: 'ie', name: 'Ireland', href: '/global/irl' },
+  { code: 'it', name: 'Italy', href: '/global/ita' },
+  { code: 'li', name: 'Liechtenstein', href: '/global/lie' },
+  { code: 'lu', name: 'Luxembourg', href: '/global/lux' },
+  { code: 'nl', name: 'Netherlands', href: '/global/nld' },
+  { code: 'nz', name: 'New Zealand', href: '/global/nzl' },
+  { code: 'no', name: 'Norway', href: '/global/nor' },
+  { code: 'sg', name: 'Singapore', href: '/global/sgp' },
+  { code: 'za', name: 'South Africa', href: '/global/zaf' },
+  { code: 'es', name: 'Spain', href: '/global/esp' },
+  { code: 'se', name: 'Sweden', href: '/global/swe' },
+  { code: 'ch', name: 'Switzerland', href: '/global/che' },
+  { code: 'gb', name: 'United Kingdom', href: '/global/gbr' },
+  { code: 'other', name: 'Other', href: '/global/oth', noFlag: true },
 ];
 
 const recentCountries = allCountries.slice(0, 10);
@@ -87,7 +97,7 @@ export const investorSections = [
       'Investment management capabilities for corporate and public retirement plans, foundations, endowments, trusts, other institutional investors and their consultants.',
     countries: recentCountries.map((country, index) =>
       index === 0
-        ? { ...country, href: '/institutional-investors.html' }
+        ? { ...country, href: '/institutional-investors' }
         : country,
     ),
   },
@@ -98,7 +108,7 @@ export const investorSections = [
       'Investment information for financial intermediaries including advisors, broker-dealers, centralized research teams, RIAs, and IFAs.',
     countries: recentCountries.map((country, index) =>
       index === 0
-        ? { ...country, href: '/investment-professionals.html' }
+        ? { ...country, href: '/investment-professionals' }
         : country,
     ),
   },
@@ -107,7 +117,13 @@ export const investorSections = [
     title: 'Individual Investors',
     description:
       'Mutual fund information including performance, commentary, holdings, distributions and prospectuses for individual investors.',
-    countries: [{ code: 'us', name: 'United States', href: '/individual-investors.html' }],
+    countries: [
+      {
+        code: 'us',
+        name: 'United States',
+        href: '/individual-investors',
+      },
+    ],
   },
 ];
 
@@ -117,19 +133,5 @@ export const footerContent = {
     'This website does not constitute an offer or recommendation by Artisan Partners of securities or services to, or a solicitation by Artisan Partners of an offer to buy securities or services from, any person residing in a jurisdiction in which such an offer or solicitation would be unlawful under the applicable laws and regulations. Materials on this website are informational only and should not be taken as investment recommendation or advice of any kind whatsoever (whether impartial or otherwise).',
     '© 2026 Artisan Partners. All rights reserved.',
   ],
-  links: [
-    { label: 'Legal Information', href: '/legal-information.html' },
-    { label: 'Privacy Policy', href: '/privacy-policy.html' },
-    { label: 'Cookies Policy', href: '/cookies-policy.html' },
-    {
-      label: 'California Privacy Policy',
-      href: '/content/dam/documents/legal/privacy-policy/Privacy-Notice-for-California-Residents.pdf',
-      external: true,
-    },
-    {
-      label: 'Form CRS',
-      href: '/content/dam/documents/legal/APLP-Form-ADV-CRS.pdf',
-      external: true,
-    },
-  ],
+  links: footerLinks,
 };

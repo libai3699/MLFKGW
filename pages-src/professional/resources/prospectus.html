@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+<head>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="apple-mobile-web-app-title" content="Artisan - Products" />
+	<meta name="application-name" content="Artisan - Products" />
+	<meta name="theme-color" content="#f7f5f5" />
+	<!-- The following tag is one of the requirements to make our site responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<!-- Tells IE to render our site in the highest available mode -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+
+	<!-- add as many as needed -->
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<meta name="build_date" content="11/27/2023 19:36:44" />
+
+	<title>Artisan - Products</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="../DGWebCmp/styles/boot.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script language="javascript" src="../DGWebCmp/js/jquery/jquery-2.1.0.min.js"></script>
+	<script language="javascript" src="../DGWebCmp/js/mobular/i2u.min.js"></script>
+	
+</head>
+			
+<body class="font-normal">
+	<a href="#main-content" class="skip-nav">Skip to main content</a>
+	<header class="site-header">
+		<div class="brand-top">
+			<div class="link_num">
+				<a href="http://www.artisanpartners.com/" style="color:#ffffff;text-decoration:none;" target="_blank">www.artisanpartners.com</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+				<span>800.344.1770</span>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-9 logo_center">
+					<div class="navbar-brand" title="" href="">
+						<img id="imgLogo" class="hidden-print img-fluid" src="img/ap_logo.png" alt="Main Logo">
+					</div>
+				</div>
+				<div class="col-md-2">
+				</div>				
+			</div>
+		</div>
+	</header>	
+	<div id="wrapper" class="wrapper">	
+		<div class="container pad-5 container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<img id="heroImg" class="hidden-print img-fluid" src="img/hero_image.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+		<main class="container pad-5 container-fluid main-content wide-width" id="main-content" role="main">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="widget col-md">
+						<h1 class="content-heading" id="contentHeading">Prospectuses &amp; Reports
+							<div class="subh1">Artisan Partners Funds</div>
+						</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="widget col-md">
+						<div class="text-left">
+							<!-- subheadings , etc can go here -->
+						</div>
+					</div>			
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="mob_component0" class="component col-12">
+						<!-- sriptlet will appear here -->
+					</div>	
+					<div class="sub-embed">
+						The files available to you for download are in Adobe Acrobat Portable Document Format (PDF)
+					</div>		
+					<div class="sub-embed">
+						&copy; 2026 Artisan Partners. All rights reserved.
+					</div>								
+				</div>
+			</div>
+		</main>
+	
+		<!-- start footer -->
+		<footer class="footer">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-4">
+						
+					</div>
+					<div class="col-sm-4 footer-links">
+						<span class="footer-copyright-text"></span>
+					</div>
+					<div class="col-sm-4">
+
+					</div>					
+				</div>
+		</footer>
+	</div>
+
+	<script language="Javascript">
+		let _host_page_custom_block = {
+			/*
+			Configuration
+			*/
+			scr_key: [''],
+			mob_library: [''],
+			library_reseller: [''],
+			reseller_container: [''],
+			/*
+			Processing
+			*/
+			get_mobDyn: () => {
+				// This is to get references to key objects 
+				let _main = _host_page_custom_block;
+				let _keys = _main.scr_key;
+				let _scr_key = _keys[0].replace(/scriptlet_/ig,'mob');
+				const _mob_dyn = window[`mob_dyn_${_scr_key}`];
+				return {
+					"main": _main,
+					"scr_key": _scr_key,
+					"mob_dyn": _mob_dyn
+				}
+			},			
+			layout_obs: new MutationObserver(function(mutations) {
+				const _ref = _host_page_custom_block.get_mobDyn();
+				if ( _ref.mob_dyn)  {				
+					if (_ref.mob_dyn.hasOwnProperty('g_tag_sets')) {
+						if ( _ref.mob_dyn.g_tag_sets ) {
+							_ref.main.addOverride();
+						}
+					}
+				}
+
+/* 				for ( var m=0; m < mutations.length;m++) {
+					let _mut = mutations[m];
+					let _id = $i2u(_mut.target).attr('id');
+					if ( _id ) {
+						if ( _id.indexOf('page_wrapper') != -1 ) {
+							_host_page_custom_block.insert_header();
+							break;
+						}
+					}
+				} */
+			}),
+			addOverride: () => {
+				const _ref = _host_page_custom_block.get_mobDyn();
+				const _mob_dyn = _ref.mob_dyn;		
+				_mob_dyn.html.custom_proc = _ref.main.custom_proc;
+			},
+			custom_proc: (data_in) => {
+				// brute force name change. Watch for special characters here.
+				data_in = data_in.replace(/(<span>|title=')First Quarter Holdings/ig,'$1Quarter 1 Holdings (December 31)');
+				data_in = data_in.replace(/(<span>|title=')Third Quarter Holdings/ig,'$1Quarter 3 Holdings (June 30)');
+				data_in = data_in.replace(/(<span>|title=')Annual Financial Statements[^O]+?Other Information/ig,'$1Annual Financial Statements & Other Information (September 30)');
+				data_in = data_in.replace(/(<span>|title=')Semi-Annual Financial Statements[^O]+?Other Information/ig,'$1Semi-Annual Financial Statements & Other Information (March 31)');
+				data_in = data_in.replace(/(<span>|title=')Annual Report/ig,'$1Annual Report (September 30)');
+				data_in = data_in.replace(/(<span>|title=')Semi-Annual Report/ig,'$1Semi-Annual Report (March 31)');
+
+				return data_in;
+			},
+			insert_header: () => {
+
+				const _header = `
+				<div id="custom_header" class="flex flex-col dt_c" data-block="main-record">
+					<div class="flex dt-ctnt cl-12 grid-more-top title-row">
+						<div class="flex dt-ctnt-kid dcell0 cl-2">
+							<div class="data_grid flex-base flex-col">
+								<div class="text-norm link-clr outer-ctrl-grid">
+									<div class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn outer-grid1 prod_pros_sizer">
+										<div class="wd100 underline flex-base flex-col justify-center title-col-0">
+											All Share Classes
+										</div>						
+									</div>
+									<div class="outer-grid2 flex flex-col justify-center" style="display: none !important;">
+							
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex dt-ctnt-kid dt-ctnt doc_container_fluid link-clr nohover cl-10 dataColHeaders">
+							<div class="flex dt-ctnt-kid dcell1 cl-1off">
+								<div class="data_grid flex-base flex-col">
+									<div class="doc-cell text-norm link-clr">
+										<div
+											class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn solo_link prod_pros_sizer doc-cell-itm doc_zone doc_zone_hdr">
+											
+										</div>
+									</div>
+								</div>
+							</div>		
+							<div class="flex dt-ctnt-kid dcell1 cl-1off">
+								<div class="data_grid flex-base flex-col">
+									<div class="doc-cell text-norm link-clr">
+										<div
+											class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn solo_link prod_pros_sizer doc-cell-itm doc_zone doc_zone_hdr">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex dt-ctnt-kid dcell1 cl-1off">
+								<div class="data_grid flex-base flex-col">
+									<div class="doc-cell text-norm link-clr">
+										<div
+											class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn solo_link prod_pros_sizer doc-cell-itm doc_zone doc_zone_hdr">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex dt-ctnt-kid dcell1 cl-1off">
+								<div class="data_grid flex-base flex-col">
+									<div class="doc-cell text-norm link-clr">
+										<div
+											class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn solo_link prod_pros_sizer doc-cell-itm doc_zone doc_zone_hdr">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex dt-ctnt-kid dcell5 nohover">&nbsp;</div>
+							<div class="flex dt-ctnt-kid dcell5 more_container hide_outer nohover"><div class="data_grid flex-base flex-col more_container hide"><div class="doc-cell text-norm link-clr"><div class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn row_sizer prod_pros_sizer doc-cell-itm doc_zone"><div class="flex-base flex-nowrap more-ctrl" data-state="collapse"><div><div class="ctrl-block flex flex-col justify-center"><svg class="more_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path data-name="Path 175" d="M0,0H24V24H0Z" fill="none"></path><path data-name="Path 176" d="M12,8a2,2,0,1,0-2-2A2.006,2.006,0,0,0,12,8Zm0,2a2,2,0,1,0,2,2A2.006,2.006,0,0,0,12,10Zm0,6a2,2,0,1,0,2,2A2.006,2.006,0,0,0,12,16Z"></path> </svg></div></div></div></div></div></div></div>				
+						</div>
+					</div>
+				</div>
+				`;				
+
+				/* const _header_old = `
+				<div id="custom_header" class="flex flex-col dt_c" data-block="main-record">
+					<div class="flex dt-ctnt cl-12 grid-more-top title-row">
+						<div class="flex dt-ctnt-kid dcell0 cl-2">
+							<div class="data_grid flex-base flex-col">
+								<div class="text-norm link-clr outer-ctrl-grid">
+									<div class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn outer-grid1 prod_pros_sizer">
+										<div class="wd100 underline flex-base flex-col justify-center title-col-0">
+											All Share Classes
+										</div>						
+									</div>
+									<div class="outer-grid2 flex flex-col justify-center" style="display: none !important;">
+							
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex dt-ctnt-kid dt-ctnt doc_container_fluid link-clr nohover cl-10">
+							<div class="flex dt-ctnt-kid dcell1 cl-1">
+								<div class="data_grid flex-base flex-col">
+									<div class="doc-cell text-norm link-clr">
+										<div
+											class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn solo_link prod_pros_sizer doc-cell-itm doc_zone doc_zone_hdr">
+											Summary Prospectus
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex dt-ctnt-kid dcell5 nohover">&nbsp;</div>
+							<div class="flex dt-ctnt-kid dcell1 cl-1">
+								<div class="data_grid flex-base flex-col">
+									<div class="doc-cell text-norm link-clr">
+										<div
+											class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn solo_link prod_pros_sizer doc-cell-itm doc_zone doc_zone_hdr">
+											Statutory Prospectus
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex dt-ctnt-kid dcell5 nohover">&nbsp;</div>
+							<div class="flex dt-ctnt-kid dcell1 cl-1">
+								<div class="data_grid flex-base flex-col">
+									<div class="doc-cell text-norm link-clr">
+										<div
+											class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn solo_link prod_pros_sizer doc-cell-itm doc_zone doc_zone_hdr">
+											Statement of Additional Information
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex dt-ctnt-kid dcell5 nohover">&nbsp;</div>
+							<div class="flex dt-ctnt-kid dcell1 cl-1">
+								<div class="data_grid flex-base flex-col">
+									<div class="doc-cell text-norm link-clr">
+										<div
+											class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn solo_link prod_pros_sizer doc-cell-itm doc_zone doc_zone_hdr">
+											Annual Report (September 30)
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex dt-ctnt-kid dcell5 nohover">&nbsp;</div>				
+							<div class="flex dt-ctnt-kid dcell1 cl-1">
+								<div class="data_grid flex-base flex-col">
+									<div class="doc-cell text-norm link-clr">
+										<div
+											class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn solo_link prod_pros_sizer doc-cell-itm doc_zone doc_zone_hdr">
+											Semi-Annual Report (March 31)
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex dt-ctnt-kid dcell5 nohover">&nbsp;</div>	
+							<div class="flex dt-ctnt-kid dcell1 cl-1">
+								<div class="data_grid flex-base flex-col">
+									<div class="doc-cell text-norm link-clr">
+										<div
+											class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn solo_link prod_pros_sizer doc-cell-itm doc_zone doc_zone_hdr">
+											Quarter 1 Holdings (December 31)
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex dt-ctnt-kid dcell5 nohover">&nbsp;</div>
+							<div class="flex dt-ctnt-kid dcell1 cl-1">
+								<div class="data_grid flex-base flex-col">
+									<div class="doc-cell text-norm link-clr">
+										<div
+											class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn solo_link prod_pros_sizer doc-cell-itm doc_zone doc_zone_hdr">
+											Quarter 3 Holdings (June 30)
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="flex dt-ctnt-kid dcell5 nohover">&nbsp;</div>
+							<div class="flex dt-ctnt-kid dcell5 more_container hide_outer nohover"><div class="data_grid flex-base flex-col more_container hide"><div class="doc-cell text-norm link-clr"><div class="flex-base init_upd_sp flex-align-items-cntr justify-sp-betwn row_sizer prod_pros_sizer doc-cell-itm doc_zone"><div class="flex-base flex-nowrap more-ctrl" data-state="collapse"><div><div class="ctrl-block flex flex-col justify-center"><svg class="more_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path data-name="Path 175" d="M0,0H24V24H0Z" fill="none"></path><path data-name="Path 176" d="M12,8a2,2,0,1,0-2-2A2.006,2.006,0,0,0,12,8Zm0,2a2,2,0,1,0,2,2A2.006,2.006,0,0,0,12,10Zm0,6a2,2,0,1,0,2,2A2.006,2.006,0,0,0,12,16Z"></path> </svg></div></div></div></div></div></div></div>				
+						</div>
+					</div>
+				</div>
+				`; */
+
+				// insert header into scriptlet presentation
+				$i2u('.page_wrapper').before(_header);
+
+			},
+			process_scr: function() {
+				let _main = _host_page_custom_block;
+
+				let _keys = _main.scr_key;
+				let _max_key = _keys.length;
+				for (var i=0; i < _max_key; i++ ) {
+					let _scr_key = _keys[i];
+					let _mob_lib = _main.mob_library[i];
+					let _reseller = _main.library_reseller[i];
+					let _res_container = _main.reseller_container[i];
+
+					if ( _scr_key != '' ) {
+						_scr_key = _scr_key.replace(/^mob/ig,'').replace(/^scriptlet_/,'');
+						// set up scriptlet
+						let _scr = '<div id="mob'+_scr_key+'" class="mob_embedded"></div>';
+						$i2u('#mob_component'+i).html(_scr);
+
+						let s=document.createElement('script');
+						s.setAttribute("type","text/javascript");
+						s.setAttribute("async","async");
+						s.setAttribute('id','mob_script_'+_scr_key);
+						if ( location.href.toLowerCase().indexOf('preview.online') != -1 ) {
+							s.src = '//preview.onlineprospectus.net/'+_res_container+'/'+_reseller+'/'+_mob_lib+'/UI_kits/DGWebCmp/js/mobular/embed.php?mid='+_scr_key;
+						} else {
+							s.src = '//'+_mob_lib+'.onlineprospectus.net/'+_mob_lib+'/DGWebCmp/js/mobular/embed.php?mid='+_scr_key;
+						}
+						document.getElementById('mob_component'+i).appendChild(s);
+					}
+
+				}
+			},
+			init: function(_cfg) {
+				let _main = _host_page_custom_block;
+				_main.layout_obs.observe( $i2u('#mob_component0')[0], {
+					attributes: true,
+					characterData: true,
+					childList: true,
+					subtree: true,
+					attributeOldValue: true,
+					characterDataOldValue: true
+				});
+
+				// set arrays. 
+				// NOTE:right now the data is arrays. Eventually we will figure out a way to auto setup 
+				// a default of 1 to n scriplets. right now it is just one
+				_main.scr_key = _cfg.scr_key;
+				_main.mob_library = _cfg.mob_library;
+				_main.library_reseller = _cfg.library_reseller;
+				_main.reseller_container = _cfg.reseller_container;
+
+				_main.process_scr();
+			}		
+		};
+	</script>
+	<script language="Javascript" src="js/config.js"></script>
+
+</body>
+</html>

@@ -6,7 +6,7 @@ import '../../pages/sustainability.css';
 export default function SustainabilityLayout({ children, pageTitle, activeNavId = 0 }) {
   useEffect(() => {
     document.body.classList.add('sustainability-site');
-    document.body.dataset.navId = '0';
+    document.body.dataset.navId = String(activeNavId);
 
     if (pageTitle) {
       document.title = pageTitle;
@@ -17,7 +17,7 @@ export default function SustainabilityLayout({ children, pageTitle, activeNavId 
       delete document.body.dataset.navId;
       document.title = 'Artisan Partners - Global Investment Management Firm';
     };
-  }, [pageTitle]);
+  }, [pageTitle, activeNavId]);
 
   return (
     <div className="sustainability-page">

@@ -1,19 +1,21 @@
+import { Link } from 'react-router-dom';
 import { sustainabilityFooter } from '../../data/sustainabilityHomeData';
+import { footerLinks } from '../../data/legalPagesData';
 
 export default function SustainabilityFooter() {
   return (
     <footer className="sustainability-footer">
       <div className="sustainability-container">
         <ul>
-          {sustainabilityFooter.links.map((link) => (
+          {footerLinks.map((link) => (
             <li key={link.label}>
-              <a
-                href={link.href}
-                target={link.external ? '_blank' : undefined}
-                rel={link.external ? 'noopener noreferrer' : undefined}
-              >
-                {link.label}
-              </a>
+              {link.external ? (
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  {link.label}
+                </a>
+              ) : (
+                <Link to={link.href}>{link.label}</Link>
+              )}
             </li>
           ))}
         </ul>

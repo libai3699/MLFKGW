@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import AboutAwareLink from '../InvestorSite/AboutAwareLink';
 import { motion } from 'framer-motion';
 import { atAGlance } from '../../data/overviewData';
 
@@ -25,7 +25,7 @@ function BulletList({ heading, items, getHref }) {
           return (
             <li key={label}>
               <span className="bullets" />
-              <Link to={href}>{label}</Link>
+              <AboutAwareLink to={href}>{label}</AboutAwareLink>
             </li>
           );
         })}

@@ -22,13 +22,13 @@ export default function SustainabilityHeader({ activeNavId = 0 }) {
               <span className="report-title">{sustainabilityReportMeta.reportLabel}</span>
               <button
                 type="button"
-                className={`navbar-toggler ${menuOpen ? '' : 'collapsed'}`}
+                className={`sustainability-menu-toggle navbar-toggler ${menuOpen ? '' : 'collapsed'}`}
                 aria-expanded={menuOpen}
                 aria-controls="offcanvas-navigation"
                 aria-label="Toggle navigation"
-                onClick={() => setMenuOpen(true)}
+                onClick={() => setMenuOpen((open) => !open)}
               >
-                <span className="navbar-toggler-icon" />
+                <span className="navbar-toggler-icon" aria-hidden="true" />
               </button>
             </div>
           </div>

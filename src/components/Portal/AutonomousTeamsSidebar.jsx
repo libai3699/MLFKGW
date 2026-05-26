@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import AboutAwareLink from '../InvestorSite/AboutAwareLink';
 import { motion } from 'framer-motion';
 
 export default function AutonomousTeamsSidebar({ heading, teams }) {
@@ -22,7 +22,7 @@ export default function AutonomousTeamsSidebar({ heading, teams }) {
               {teams.map((team) => (
                 <li key={team}>
                   <span className="bullets" />
-                  <Link to="/about-us/investment-strategies">{team}</Link>
+                  <AboutAwareLink to="/about-us/investment-strategies">{team}</AboutAwareLink>
                 </li>
               ))}
             </ul>

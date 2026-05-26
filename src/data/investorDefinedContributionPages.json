@@ -1,0 +1,362 @@
+{
+  "pageTitle": "Artisan Partners | Defined Contribution",
+  "heading": "Partnering for Innovative Retirement Solutions",
+  "intro": "We offer investment strategies to suit a broad array of client mandates in a variety of investment vehicles including separate accounts, mutual funds, collective investment trusts and offshore vehicles.",
+  "bannerImage": "https://www.artisanpartners.com/content/dam/images/carousel/dc-home-page-banner-mar-2017-1170x253.jpg",
+  "teams": [
+    {
+      "type": "team",
+      "name": "Growth Team"
+    },
+    {
+      "type": "strategy",
+      "team": "Growth Team",
+      "label": "Global Opportunities",
+      "href": "/institutional-investors/investments/growth-team/global-opportunities-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fgrowth-team%2Fglobal-opportunities-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fgrowth-team%2Fglobal-opportunities-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "Growth Team",
+      "label": "Global Discovery",
+      "href": "/institutional-investors/investments/growth-team/global-discovery-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources",
+        "query": null
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "Growth Team",
+      "label": "U.S. Mid-Cap Growth",
+      "href": "/institutional-investors/investments/growth-team/us-mid-cap-growth-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fgrowth-team%2Fus-mid-cap-growth-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fgrowth-team%2Fus-mid-cap-growth-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "Growth Team",
+      "label": "U.S. Small-Cap Growth",
+      "href": "/institutional-investors/investments/growth-team/us-small-cap-growth-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fgrowth-team%2Fus-small-cap-growth-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fgrowth-team%2Fus-small-cap-growth-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "Growth Team",
+      "label": "Franchise",
+      "href": "/institutional-investors/investments/growth-team/franchise-strategy",
+      "resources": null
+    },
+    {
+      "type": "team",
+      "name": "Global Equity Team"
+    },
+    {
+      "type": "strategy",
+      "team": "Global Equity Team",
+      "label": "Global Equity",
+      "href": "/institutional-investors/investments/global-equity-team/global-equity-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fglobal-equity-team%2Fglobal-equity-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fglobal-equity-team%2Fglobal-equity-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "Global Equity Team",
+      "label": "Non-U.S. Growth",
+      "href": "/institutional-investors/investments/global-equity-team/non-us-growth-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fglobal-equity-team%2Fnon-us-growth-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fglobal-equity-team%2Fnon-us-growth-strategy"
+      }
+    },
+    {
+      "type": "team",
+      "name": "U.S. Value Team"
+    },
+    {
+      "type": "strategy",
+      "team": "U.S. Value Team",
+      "label": "Value Equity",
+      "href": "/institutional-investors/investments/us-value-team/value-equity-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fus-value-team%2Fvalue-equity-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fus-value-team%2Fvalue-equity-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "U.S. Value Team",
+      "label": "U.S. Mid-Cap Value",
+      "href": "/institutional-investors/investments/us-value-team/us-mid-cap-value-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fus-value-team%2Fus-mid-cap-value-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fus-value-team%2Fus-mid-cap-value-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "U.S. Value Team",
+      "label": "Value Income",
+      "href": "/institutional-investors/investments/us-value-team/value-income-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fus-value-team%2Fvalue-income-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fus-value-team%2Fvalue-income-strategy"
+      }
+    },
+    {
+      "type": "team",
+      "name": "International Value Group"
+    },
+    {
+      "type": "strategy",
+      "team": "International Value Group",
+      "label": "International Value",
+      "href": "/institutional-investors/investments/international-value-group/international-value-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Finternational-value-group%2Finternational-value-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Finternational-value-group%2Finternational-value-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "International Value Group",
+      "label": "International Explorer",
+      "href": "/institutional-investors/investments/international-value-group/international-explorer-strategy",
+      "resources": null
+    },
+    {
+      "type": "strategy",
+      "team": "International Value Group",
+      "label": "Global Special Situations",
+      "href": "/institutional-investors/investments/international-value-group/global-special-situations-strategy",
+      "resources": null
+    },
+    {
+      "type": "team",
+      "name": "Global Value Team"
+    },
+    {
+      "type": "strategy",
+      "team": "Global Value Team",
+      "label": "Global Value",
+      "href": "/institutional-investors/investments/global-value-team/global-value-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fglobal-value-team%2Fglobal-value-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fglobal-value-team%2Fglobal-value-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "Global Value Team",
+      "label": "Select Equity",
+      "href": "/institutional-investors/investments/global-value-team/select-equity-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fglobal-value-team%2Fselect-equity-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fglobal-value-team%2Fselect-equity-strategy"
+      }
+    },
+    {
+      "type": "team",
+      "name": "Sustainable Emerging Markets Team"
+    },
+    {
+      "type": "strategy",
+      "team": "Sustainable Emerging Markets Team",
+      "label": "Sustainable Emerging Markets",
+      "href": "/institutional-investors/investments/sustainable-emerging-markets-team/sustainable-emerging-markets-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fsustainable-emerging-markets-team%2Fsustainable-emerging-markets-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fsustainable-emerging-markets-team%2Fsustainable-emerging-markets-strategy"
+      }
+    },
+    {
+      "type": "team",
+      "name": "Credit Team"
+    },
+    {
+      "type": "strategy",
+      "team": "Credit Team",
+      "label": "High Income",
+      "href": "/institutional-investors/investments/credit-team/high-income-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fcredit-team%2Fhigh-income-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fcredit-team%2Fhigh-income-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "Credit Team",
+      "label": "Credit Opportunities",
+      "href": "/institutional-investors/investments/credit-team/credit-opportunities-strategy",
+      "resources": null
+    },
+    {
+      "type": "strategy",
+      "team": "Credit Team",
+      "label": "Floating Rate",
+      "href": "/institutional-investors/investments/credit-team/floating-rate-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fcredit-team%2Ffloating-rate-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fcredit-team%2Ffloating-rate-strategy"
+      }
+    },
+    {
+      "type": "team",
+      "name": "Developing World Team"
+    },
+    {
+      "type": "strategy",
+      "team": "Developing World Team",
+      "label": "Developing World",
+      "href": "/institutional-investors/investments/developing-world-team/developing-world-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fdeveloping-world-team%2Fdeveloping-world-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fdeveloping-world-team%2Fdeveloping-world-strategy"
+      }
+    },
+    {
+      "type": "team",
+      "name": "Antero Peak Group"
+    },
+    {
+      "type": "strategy",
+      "team": "Antero Peak Group",
+      "label": "Antero Peak",
+      "href": "/institutional-investors/investments/antero-peak-group/antero-peak-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Fantero-peak-group%2Fantero-peak-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Fantero-peak-group%2Fantero-peak-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "Antero Peak Group",
+      "label": "Antero Peak Hedge",
+      "href": "/institutional-investors/investments/antero-peak-group/antero-peak-hedge-strategy",
+      "resources": null
+    },
+    {
+      "type": "team",
+      "name": "International Small-Mid Team"
+    },
+    {
+      "type": "strategy",
+      "team": "International Small-Mid Team",
+      "label": "Non-U.S. Small-Mid Growth",
+      "href": "/institutional-investors/investments/international-small-mid-team/non-us-small-mid-growth-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Finternational-small-mid-team%2Fnon-us-small-mid-growth-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Finternational-small-mid-team%2Fnon-us-small-mid-growth-strategy"
+      }
+    },
+    {
+      "type": "team",
+      "name": "EMsights Capital Group"
+    },
+    {
+      "type": "strategy",
+      "team": "EMsights Capital Group",
+      "label": "Emerging Markets Debt Opportunities",
+      "href": "/institutional-investors/investments/emsights-capital-group/emerging-markets-debt-opportunities-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Femsights-capital-group%2Femerging-markets-debt-opportunities-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Femsights-capital-group%2Femerging-markets-debt-opportunities-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "EMsights Capital Group",
+      "label": "Global Unconstrained",
+      "href": "/institutional-investors/investments/emsights-capital-group/global-unconstrained-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Femsights-capital-group%2Fglobal-unconstrained-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Femsights-capital-group%2Fglobal-unconstrained-strategy"
+      }
+    },
+    {
+      "type": "strategy",
+      "team": "EMsights Capital Group",
+      "label": "Emerging Markets Local Opportunities",
+      "href": "/institutional-investors/investments/emsights-capital-group/emerging-markets-local-opportunities-strategy",
+      "resources": {
+        "label": "Resources",
+        "href": "/institutional-investors/resources?resources-select=artisanpartners%3Ateam-name%2Femsights-capital-group%2Femerging-markets-local-opportunities-strategy",
+        "query": "resources-select=artisanpartners%3Ateam-name%2Femsights-capital-group%2Femerging-markets-local-opportunities-strategy"
+      }
+    }
+  ],
+  "loginPanel": {
+    "heading": "Log In  |  Register for Exclusive Access",
+    "bullets": [
+      "Vehicle Summary",
+      "Attribution",
+      "CIT"
+    ],
+    "ctaLabel": "Log In  |  Register",
+    "href": "/institutional-investors/user-login-registration"
+  },
+  "insights": [
+    {
+      "image": "https://www.artisanpartners.com/content/dam/images/investor-updates/artisan-partners-investor-update.jpg",
+      "title": "Artisan Partners International Small-Mid Team Investor Update—Q1 2026",
+      "description": "Rezo Kanovich, portfolio manager of the Artisan Partners International Small-Mid Team, discusses portfolio performance and positioning and where the team is finding the most attractive long-term opportunities.",
+      "ctaLabel": "Listen Now",
+      "href": "/institutional-investors/news-insights/thought-leadership/insights/artisan-partners-international-small-mid-team-investor-update-q1-2026",
+      "external": false
+    },
+    {
+      "image": "https://www.artisanpartners.com/content/dam/images/pm-viewpoints/INTV-bloomberg-surveillance-feat-Samra-Aprl-2026.jpg",
+      "title": "Bloomberg Surveillance—As Long as the Music is Playing",
+      "description": "Spending around the Magnificent Seven is having a Chuck Prince moment, according to International Value Portfolio Manager David Samra. As long as the spending continues, the market continues to narrow, though some AI-related opportunities can still be found at attractive valuations.",
+      "ctaLabel": "Watch Now",
+      "href": "/institutional-investors/news-insights/thought-leadership/insights/bloomberg-surveillance-as-long-as-the-music-is-playing",
+      "external": false
+    },
+    {
+      "image": "https://www.artisanpartners.com/content/dam/images/insights/gss-citywire-pro-buyer-website-thumbnail-764x430.jpg",
+      "title": "Citywire Pro Buyer—Enhancing Credit Flexibility",
+      "description": "With growing complexity and segmentation in the credit markets, Brian Louko, Portfolio Manager for the Artisan Special Situations Strategy, shares why a flexible approach across the capital structure may help to identify more attractive risk-adjusted opportunities.",
+      "ctaLabel": "View PDF",
+      "href": "https://www.artisanpartners.com/content/dam/documents/insights/vxus/Citywire-Enhancing-Credit-Flexibility-vXUS.pdf",
+      "external": true
+    },
+    {
+      "image": "https://www.artisanpartners.com/content/dam/images/insights/insights-global-unconstrained-strategy-4yr-764x430.jpg",
+      "title": "Celebrating Our 4-Year Milestone: Artisan Global Unconstrained Strategy",
+      "description": "Artisan Partners and the EMsights Capital Group are proud to celebrate the 4-year anniversary of the Artisan Global Unconstrained Strategy.",
+      "ctaLabel": "View PDF",
+      "href": "https://www.artisanpartners.com/content/dam/documents/insights/vxus/Global-Unconstrained-Celebrating-Our-4-Year-Milestone-vXUS.pdf",
+      "external": true
+    }
+  ]
+}

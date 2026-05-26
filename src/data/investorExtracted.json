@@ -1,0 +1,953 @@
+{
+  "carousel": [],
+  "institutionalTeams": [
+    {
+      "name": "Growth",
+      "management": "Jim Hamel, Matt Kamm, Jason White, Jay Warner, Angela Wu",
+      "investmentProcess": [
+        {
+          "type": "video",
+          "href": "/institutional-investors/about-us/investment-process/growth-team.html",
+          "label": "Watch Now"
+        },
+        {
+          "type": "pdf",
+          "href": "/content/dam/documents/investment-process/vxus/Investment-Process-Growth-Team-vXUS.pdf",
+          "label": "View PDF",
+          "external": true
+        }
+      ],
+      "strategies": [
+        {
+          "href": "/institutional-investors/investments/growth-team/global-opportunities-strategy.html",
+          "label": "Global Opportunities"
+        },
+        {
+          "href": "/institutional-investors/investments/growth-team/global-discovery-strategy.html",
+          "label": "Global Discovery"
+        },
+        {
+          "href": "/institutional-investors/investments/growth-team/us-mid-cap-growth-strategy.html",
+          "label": "U.S. Mid-Cap Growth"
+        },
+        {
+          "href": "/institutional-investors/investments/growth-team/us-small-cap-growth-strategy.html",
+          "label": "U.S. Small-Cap Growth"
+        },
+        {
+          "href": "/institutional-investors/investments/growth-team/franchise-strategy.html",
+          "label": "Franchise"
+        }
+      ]
+    },
+    {
+      "name": "Global Equity",
+      "management": "Mark Yockey, Charles-Henri Hamker",
+      "investmentProcess": [
+        {
+          "type": "video",
+          "href": "/institutional-investors/about-us/investment-process/global-equity-team.html",
+          "label": "Watch Now"
+        },
+        {
+          "type": "pdf",
+          "href": "/content/dam/documents/investment-process/vxus/Investment-Process-Global-Equity-Team-vXUS.pdf",
+          "label": "View PDF",
+          "external": true
+        }
+      ],
+      "strategies": [
+        {
+          "href": "/institutional-investors/investments/global-equity-team/global-equity-strategy.html",
+          "label": "Global Equity"
+        },
+        {
+          "href": "/institutional-investors/investments/global-equity-team/non-us-growth-strategy.html",
+          "label": "Non-U.S. Growth"
+        }
+      ]
+    },
+    {
+      "name": "U.S. Value",
+      "management": "Daniel Kane, Thomas Reynolds, Craig Inman",
+      "investmentProcess": [
+        {
+          "type": "video",
+          "href": "/institutional-investors/about-us/investment-process/us-value-team.html",
+          "label": "Watch Now"
+        },
+        {
+          "type": "pdf",
+          "href": "/content/dam/documents/investment-process/vxus/Investment-Process-US-Value-Team-vXUS.pdf",
+          "label": "View PDF",
+          "external": true
+        }
+      ],
+      "strategies": [
+        {
+          "href": "/institutional-investors/investments/us-value-team/value-equity-strategy.html",
+          "label": "Value Equity"
+        },
+        {
+          "href": "/institutional-investors/investments/us-value-team/us-mid-cap-value-strategy.html",
+          "label": "U.S. Mid-Cap Value"
+        },
+        {
+          "href": "/institutional-investors/investments/us-value-team/value-income-strategy.html",
+          "label": "Value Income"
+        }
+      ]
+    },
+    {
+      "name": "International Value Group",
+      "management": "David Samra, Ian McGonigle, Benjamin Herrick, Beini Zhou, Anand Vasagiri, Brian Louko",
+      "investmentProcess": [
+        {
+          "type": "pdf",
+          "href": "/content/dam/documents/investment-process/vxus/Investment-Process-International-Value-Team-vXUS.pdf",
+          "label": "View PDF",
+          "external": true
+        }
+      ],
+      "strategies": [
+        {
+          "href": "/institutional-investors/investments/international-value-group/international-value-strategy.html",
+          "label": "International Value"
+        },
+        {
+          "href": "/institutional-investors/investments/international-value-group/international-explorer-strategy.html",
+          "label": "International Explorer"
+        },
+        {
+          "href": "/institutional-investors/investments/international-value-group/global-special-situations-strategy.html",
+          "label": "Global Special Situations"
+        }
+      ]
+    },
+    {
+      "name": "Global Value",
+      "management": "Daniel O'Keefe, Michael McKinnon",
+      "investmentProcess": [
+        {
+          "type": "pdf",
+          "href": "/content/dam/documents/investment-process/vxus/Investment-Process-Global-Value-Team-vXUS.pdf",
+          "label": "View PDF",
+          "external": true
+        }
+      ],
+      "strategies": [
+        {
+          "href": "/institutional-investors/investments/global-value-team/global-value-strategy.html",
+          "label": "Global Value"
+        },
+        {
+          "href": "/institutional-investors/investments/global-value-team/select-equity-strategy.html",
+          "label": "Select Equity"
+        }
+      ]
+    },
+    {
+      "name": "Sustainable Emerging Markets",
+      "management": "Maria Negrete-Gruson",
+      "investmentProcess": [
+        {
+          "type": "pdf",
+          "href": "/content/dam/documents/investment-process/vxus/Investment-Process-Sustainable-Emerging-Markets-Team-vXUS.pdf",
+          "label": "View PDF",
+          "external": true
+        }
+      ],
+      "strategies": [
+        {
+          "href": "/institutional-investors/investments/sustainable-emerging-markets-team/sustainable-emerging-markets-strategy.html",
+          "label": "Sustainable Emerging Markets"
+        }
+      ]
+    },
+    {
+      "name": "Credit",
+      "management": "Bryan Krug",
+      "investmentProcess": [
+        {
+          "type": "video",
+          "href": "/institutional-investors/about-us/investment-process/credit-team.html",
+          "label": "Watch Now"
+        },
+        {
+          "type": "pdf",
+          "href": "/content/dam/documents/investment-process/vxus/Investment-Process-Credit-Team-vXUS.pdf",
+          "label": "View PDF",
+          "external": true
+        }
+      ],
+      "strategies": [
+        {
+          "href": "/institutional-investors/investments/credit-team/high-income-strategy.html",
+          "label": "High Income"
+        },
+        {
+          "href": "/institutional-investors/investments/credit-team/credit-opportunities-strategy.html",
+          "label": "Credit Opportunities"
+        },
+        {
+          "href": "/institutional-investors/investments/credit-team/floating-rate-strategy.html",
+          "label": "Floating Rate"
+        }
+      ]
+    },
+    {
+      "name": "Developing World",
+      "management": "Lewis Kaufman",
+      "investmentProcess": [],
+      "strategies": [
+        {
+          "href": "/institutional-investors/investments/developing-world-team/developing-world-strategy.html",
+          "label": "Developing World"
+        }
+      ]
+    },
+    {
+      "name": "Antero Peak Group",
+      "management": "Christopher Smith",
+      "investmentProcess": [],
+      "strategies": [
+        {
+          "href": "/institutional-investors/investments/antero-peak-group/antero-peak-strategy.html",
+          "label": "Antero Peak"
+        },
+        {
+          "href": "/institutional-investors/investments/antero-peak-group/antero-peak-hedge-strategy.html",
+          "label": "Antero Peak Hedge"
+        }
+      ]
+    },
+    {
+      "name": "International Small-Mid",
+      "management": "Rezo Kanovich",
+      "investmentProcess": [
+        {
+          "type": "pdf",
+          "href": "/content/dam/documents/investment-process/vxus/Investment-Process-International-Small-Mid-Team-vXUS.pdf",
+          "label": "View PDF",
+          "external": true
+        }
+      ],
+      "strategies": [
+        {
+          "href": "/institutional-investors/investments/international-small-mid-team/non-us-small-mid-growth-strategy.html",
+          "label": "Non-U.S. Small-Mid Growth"
+        }
+      ]
+    },
+    {
+      "name": "EMsights Capital Group",
+      "management": "Michael Cirami, Sarah Orvin",
+      "investmentProcess": [],
+      "strategies": [
+        {
+          "href": "/institutional-investors/investments/emsights-capital-group/emerging-markets-debt-opportunities-strategy.html",
+          "label": "Emerging Markets Debt Opportunities"
+        },
+        {
+          "href": "/institutional-investors/investments/emsights-capital-group/global-unconstrained-strategy.html",
+          "label": "Global Unconstrained"
+        },
+        {
+          "href": "/institutional-investors/investments/emsights-capital-group/emerging-markets-local-opportunities-strategy.html",
+          "label": "Emerging Markets Local Opportunities"
+        }
+      ]
+    },
+    {
+      "name": "Grandview Property Partners",
+      "management": "Raj Menon, Dean Sotter, Eric Freeman, Jeff Usas",
+      "investmentProcess": [],
+      "strategies": [
+        {
+          "href": "https://grandviewpartners.com/",
+          "label": "Private Real Estate"
+        }
+      ]
+    }
+  ],
+  "professionalFunds": [
+    {
+      "categories": "Equity",
+      "fundName": "Developing World",
+      "investor": {
+        "href": "/investment-professionals/investments/developing-world-team/developing-world-fund-artyx.html",
+        "ticker": "ARTYX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/developing-world-team/developing-world-fund-apdyx.html",
+        "ticker": "APDYX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/developing-world-team/developing-world-fund-aphyx.html",
+        "ticker": "APHYX"
+      }
+    },
+    {
+      "categories": "Credit",
+      "fundName": "Emerging Markets Debt Opportunities",
+      "investor": {
+        "href": "/investment-professionals/investments/emsights-capital-group/emerging-markets-debt-opportunities-fund-apfox.html",
+        "ticker": "APFOX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/emsights-capital-group/emerging-markets-debt-opportunities-fund-apdox.html",
+        "ticker": "APDOX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/emsights-capital-group/emerging-markets-debt-opportunities-fund-aphox.html",
+        "ticker": "APHOX"
+      }
+    },
+    {
+      "categories": "Credit",
+      "fundName": "Floating Rate",
+      "investor": {
+        "href": "/investment-professionals/investments/credit-team/floating-rate-fund-artux.html",
+        "ticker": "ARTUX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/credit-team/floating-rate-fund-apdux.html",
+        "ticker": "APDUX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/credit-team/floating-rate-fund-aphux.html",
+        "ticker": "APHUX"
+      }
+    },
+    {
+      "categories": "Equity, Alternatives",
+      "fundName": "Focus",
+      "investor": {
+        "href": "/investment-professionals/investments/antero-peak-group/focus-fund-arttx.html",
+        "ticker": "ARTTX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/antero-peak-group/focus-fund-apdtx.html",
+        "ticker": "APDTX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/antero-peak-group/focus-fund-aphtx.html",
+        "ticker": "APHTX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "Global Discovery",
+      "investor": {
+        "href": "/investment-professionals/investments/growth-team/global-discovery-fund-apfdx.html",
+        "ticker": "APFDX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/growth-team/global-discovery-fund-apddx.html",
+        "ticker": "APDDX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/growth-team/global-discovery-fund-aphdx.html",
+        "ticker": "APHDX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "Global Equity",
+      "investor": {
+        "href": "/investment-professionals/investments/global-equity-team/global-equity-fund-arthx.html",
+        "ticker": "ARTHX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/global-equity-team/global-equity-fund-apdhx.html",
+        "ticker": "APDHX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/global-equity-team/global-equity-fund-aphhx.html",
+        "ticker": "APHHX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "Global Opportunities",
+      "investor": {
+        "href": "/investment-professionals/investments/growth-team/global-opportunities-fund-artrx.html",
+        "ticker": "ARTRX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/growth-team/global-opportunities-fund-apdrx.html",
+        "ticker": "APDRX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/growth-team/global-opportunities-fund-aphrx.html",
+        "ticker": "APHRX"
+      }
+    },
+    {
+      "categories": "Credit, Alternatives",
+      "fundName": "Global Unconstrained",
+      "investor": {
+        "href": "/investment-professionals/investments/emsights-capital-group/global-unconstrained-fund-apfpx.html",
+        "ticker": "APFPX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/emsights-capital-group/global-unconstrained-fund-apdpx.html",
+        "ticker": "APDPX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/emsights-capital-group/global-unconstrained-fund-aphpx.html",
+        "ticker": "APHPX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "Global Value",
+      "investor": {
+        "href": "/investment-professionals/investments/global-value-team/global-value-fund-artgx.html",
+        "ticker": "ARTGX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/global-value-team/global-value-fund-apdgx.html",
+        "ticker": "APDGX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/global-value-team/global-value-fund-aphgx.html",
+        "ticker": "APHGX"
+      }
+    },
+    {
+      "categories": "Credit",
+      "fundName": "High Income",
+      "investor": {
+        "href": "/investment-professionals/investments/credit-team/high-income-fund-artfx.html",
+        "ticker": "ARTFX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/credit-team/high-income-fund-apdfx.html",
+        "ticker": "APDFX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/credit-team/high-income-fund-aphfx.html",
+        "ticker": "APHFX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "International",
+      "investor": {
+        "href": "/investment-professionals/investments/global-equity-team/international-fund-artix.html",
+        "ticker": "ARTIX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/global-equity-team/international-fund-apdix.html",
+        "ticker": "APDIX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/global-equity-team/international-fund-aphix.html",
+        "ticker": "APHIX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "International Explorer",
+      "investor": {
+        "href": null,
+        "ticker": null
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/international-value-group/international-explorer-fund-ardbx.html",
+        "ticker": "ARDBX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/international-value-group/international-explorer-fund-arhbx.html",
+        "ticker": "ARHBX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "International Small-Mid",
+      "investor": {
+        "href": "/investment-professionals/investments/international-small-mid-team/international-small-mid-fund-artjx.html",
+        "ticker": "ARTJX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/international-small-mid-team/international-small-mid-fund-apdjx.html",
+        "ticker": "APDJX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/international-small-mid-team/international-small-mid-fund-aphjx.html",
+        "ticker": "APHJX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "International Value",
+      "investor": {
+        "href": "/investment-professionals/investments/international-value-group/international-value-fund-artkx.html",
+        "ticker": "ARTKX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/international-value-group/international-value-fund-apdkx.html",
+        "ticker": "APDKX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/international-value-group/international-value-fund-aphkx.html",
+        "ticker": "APHKX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "Mid Cap",
+      "investor": {
+        "href": "/investment-professionals/investments/growth-team/mid-cap-fund-artmx.html",
+        "ticker": "ARTMX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/growth-team/mid-cap-fund-apdmx.html",
+        "ticker": "APDMX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/growth-team/mid-cap-fund-aphmx.html",
+        "ticker": "APHMX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "Mid Cap Value",
+      "investor": {
+        "href": "/investment-professionals/investments/us-value-team/mid-cap-value-fund-artqx.html",
+        "ticker": "ARTQX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/us-value-team/mid-cap-value-fund-apdqx.html",
+        "ticker": "APDQX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/us-value-team/mid-cap-value-fund-aphqx.html",
+        "ticker": "APHQX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "Select Equity",
+      "investor": {
+        "href": "/investment-professionals/investments/global-value-team/select-equity-fund-artnx.html",
+        "ticker": "ARTNX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/global-value-team/select-equity-fund-apdnx.html",
+        "ticker": "APDNX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/global-value-team/select-equity-fund-aphnx.html",
+        "ticker": "APHNX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "Small Cap",
+      "investor": {
+        "href": "/investment-professionals/investments/growth-team/small-cap-fund-artsx.html",
+        "ticker": "ARTSX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/growth-team/small-cap-fund-apdsx.html",
+        "ticker": "APDSX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/growth-team/small-cap-fund-aphsx.html",
+        "ticker": "APHSX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "Sustainable Emerging Markets",
+      "investor": {
+        "href": "/investment-professionals/investments/sustainable-emerging-markets-team/sustainable-emerging-markets-fund-artzx.html",
+        "ticker": "ARTZX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/sustainable-emerging-markets-team/sustainable-emerging-markets-fund-apdex.html",
+        "ticker": "APDEX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/sustainable-emerging-markets-team/sustainable-emerging-markets-fund-aphex.html",
+        "ticker": "APHEX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "Value",
+      "investor": {
+        "href": "/investment-professionals/investments/us-value-team/value-fund-artlx.html",
+        "ticker": "ARTLX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/us-value-team/value-fund-apdlx.html",
+        "ticker": "APDLX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/us-value-team/value-fund-aphlx.html",
+        "ticker": "APHLX"
+      }
+    },
+    {
+      "categories": "Equity",
+      "fundName": "Value Income",
+      "investor": {
+        "href": "/investment-professionals/investments/us-value-team/value-income-fund-apfwx.html",
+        "ticker": "APFWX"
+      },
+      "advisor": {
+        "href": "/investment-professionals/investments/us-value-team/value-income-fund-apdwx.html",
+        "ticker": "APDWX"
+      },
+      "institutional": {
+        "href": "/investment-professionals/investments/us-value-team/value-income-fund-aphwx.html",
+        "ticker": "APHWX"
+      }
+    }
+  ],
+  "individualFunds": [
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/developing-world-team/developing-world-fund-artyx.html",
+      "label": "Developing World (ARTYX)",
+      "team": "Developing World"
+    },
+    {
+      "categories": "Credit",
+      "href": "/individual-investors/investments/emsights-capital-group/emerging-markets-debt-opportunities-fund-apfox.html",
+      "label": "Emerging Markets Debt Opportunities (APFOX)",
+      "team": "EMsights Capital Group"
+    },
+    {
+      "categories": "Credit",
+      "href": "/individual-investors/investments/credit-team/floating-rate-fund-artux.html",
+      "label": "Floating Rate (ARTUX)",
+      "team": "Credit"
+    },
+    {
+      "categories": "Equity, Alternatives",
+      "href": "/individual-investors/investments/antero-peak-group/focus-fund-arttx.html",
+      "label": "Focus (ARTTX)",
+      "team": "Antero Peak Group"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/growth-team/global-discovery-fund-apfdx.html",
+      "label": "Global Discovery (APFDX)",
+      "team": "Growth"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/global-equity-team/global-equity-fund-arthx.html",
+      "label": "Global Equity (ARTHX)",
+      "team": "Global Equity"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/growth-team/global-opportunities-fund-artrx.html",
+      "label": "Global Opportunities (ARTRX)",
+      "team": "Growth"
+    },
+    {
+      "categories": "Credit, Alternatives",
+      "href": "/individual-investors/investments/emsights-capital-group/global-unconstrained-fund-apfpx.html",
+      "label": "Global Unconstrained (APFPX)",
+      "team": "EMsights Capital Group"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/global-value-team/global-value-fund-artgx.html",
+      "label": "Global Value (ARTGX)",
+      "team": "Global Value"
+    },
+    {
+      "categories": "Credit",
+      "href": "/individual-investors/investments/credit-team/high-income-fund-artfx.html",
+      "label": "High Income (ARTFX)",
+      "team": "Credit"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/global-equity-team/international-fund-artix.html",
+      "label": "International (ARTIX)",
+      "team": "Global Equity"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/international-value-group/international-explorer-fund-ardbx.html",
+      "label": "International Explorer (ARDBX)",
+      "team": "International Value Group"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/international-small-mid-team/international-small-mid-fund-artjx.html",
+      "label": "International Small-Mid (ARTJX)",
+      "team": "International Small-Mid"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/international-value-group/international-value-fund-artkx.html",
+      "label": "International Value (ARTKX)",
+      "team": "International Value Group"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/growth-team/mid-cap-fund-artmx.html",
+      "label": "Mid Cap (ARTMX)",
+      "team": "Growth"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/us-value-team/mid-cap-value-fund-artqx.html",
+      "label": "Mid Cap Value (ARTQX)",
+      "team": "U.S. Value"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/global-value-team/select-equity-fund-artnx.html",
+      "label": "Select Equity (ARTNX)",
+      "team": "Global Value"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/growth-team/small-cap-fund-artsx.html",
+      "label": "Small Cap (ARTSX)",
+      "team": "Growth"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/sustainable-emerging-markets-team/sustainable-emerging-markets-fund-artzx.html",
+      "label": "Sustainable Emerging Markets (ARTZX)",
+      "team": "Sustainable Emerging Markets"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/us-value-team/value-fund-artlx.html",
+      "label": "Value (ARTLX)",
+      "team": "U.S. Value"
+    },
+    {
+      "categories": "Equity",
+      "href": "/individual-investors/investments/us-value-team/value-income-fund-apfwx.html",
+      "label": "Value Income (APFWX)",
+      "team": "U.S. Value"
+    }
+  ],
+  "thoughtLeadership": [
+    {
+      "title": "Artisan Partners International Small-Mid Team Investor Update—Q1 2026",
+      "href": "/institutional-investors/news-insights/thought-leadership/insights/artisan-partners-international-small-mid-team-investor-update-q1-2026.html",
+      "cta": "Listen Now",
+      "icon": "audio",
+      "image": "/content/dam/images/investor-updates/artisan-partners-investor-update.jpg"
+    },
+    {
+      "title": "Bloomberg Surveillance—As Long as the Music is Playing",
+      "href": "/institutional-investors/news-insights/thought-leadership/insights/bloomberg-surveillance-as-long-as-the-music-is-playing.html",
+      "cta": "Watch Now",
+      "icon": "video",
+      "image": "/content/dam/images/pm-viewpoints/INTV-bloomberg-surveillance-feat-Samra-Aprl-2026.jpg"
+    },
+    {
+      "title": "Citywire Pro Buyer—Enhancing Credit Flexibility",
+      "href": "/content/dam/documents/insights/vxus/Citywire-Enhancing-Credit-Flexibility-vXUS.pdf",
+      "cta": "View PDF",
+      "icon": "document",
+      "image": "/content/dam/images/insights/gss-citywire-pro-buyer-website-thumbnail-764x430.jpg"
+    },
+    {
+      "title": "Artisan Canvas — timely insights and updates from our investment teams and firm leadership",
+      "href": "/institutional-investors/news-insights/artisan-canvas.html",
+      "cta": "View Our Blog",
+      "icon": "window",
+      "image": "/content/dam/images/banners/home-side-bar-image-canvas-blog-285x160.png"
+    }
+  ],
+  "globalFunds": [
+    {
+      "categories": "Equity, Alternatives",
+      "strategyHref": "/global/aus/investments/antero-peak-group/antero-peak-strategy.html",
+      "strategyName": "Antero Peak",
+      "teamHref": "/global/aus/investments/antero-peak-group.html",
+      "teamName": "Antero Peak Group"
+    },
+    {
+      "categories": "Equity, Alternatives",
+      "strategyHref": "/global/aus/investments/antero-peak-group/antero-peak-hedge-strategy.html",
+      "strategyName": "Antero Peak Hedge",
+      "teamHref": "/global/aus/investments/antero-peak-group.html",
+      "teamName": "Antero Peak Group"
+    },
+    {
+      "categories": "Credit, Alternatives",
+      "strategyHref": "/global/aus/investments/credit-team/credit-opportunities-strategy.html",
+      "strategyName": "Credit Opportunities",
+      "teamHref": "/global/aus/investments/credit-team.html",
+      "teamName": "Credit"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/developing-world-team/developing-world-strategy.html",
+      "strategyName": "Developing World",
+      "teamHref": "/global/aus/investments/developing-world-team.html",
+      "teamName": "Developing World"
+    },
+    {
+      "categories": "Credit",
+      "strategyHref": "/global/aus/investments/emsights-capital-group/emerging-markets-debt-opportunities-strategy.html",
+      "strategyName": "Emerging Markets Debt Opportunities",
+      "teamHref": "/global/aus/investments/emsights-capital-group.html",
+      "teamName": "EMsights Capital Group"
+    },
+    {
+      "categories": "Credit",
+      "strategyHref": "/global/aus/investments/emsights-capital-group/emerging-markets-local-opportunities-strategy.html",
+      "strategyName": "Emerging Markets Local Opportunities",
+      "teamHref": "/global/aus/investments/emsights-capital-group.html",
+      "teamName": "EMsights Capital Group"
+    },
+    {
+      "categories": "Credit",
+      "strategyHref": "/global/aus/investments/credit-team/floating-rate-strategy.html",
+      "strategyName": "Floating Rate",
+      "teamHref": "/global/aus/investments/credit-team.html",
+      "teamName": "Credit"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/growth-team/franchise-strategy.html",
+      "strategyName": "Franchise",
+      "teamHref": "/global/aus/investments/growth-team.html",
+      "teamName": "Growth"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/growth-team/global-discovery-strategy.html",
+      "strategyName": "Global Discovery",
+      "teamHref": "/global/aus/investments/growth-team.html",
+      "teamName": "Growth"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/global-equity-team/global-equity-strategy.html",
+      "strategyName": "Global Equity",
+      "teamHref": "/global/aus/investments/global-equity-team.html",
+      "teamName": "Global Equity"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/growth-team/global-opportunities-strategy.html",
+      "strategyName": "Global Opportunities",
+      "teamHref": "/global/aus/investments/growth-team.html",
+      "teamName": "Growth"
+    },
+    {
+      "categories": "Credit, Alternatives",
+      "strategyHref": "/global/aus/investments/international-value-group/global-special-situations-strategy.html",
+      "strategyName": "Global Special Situations",
+      "teamHref": "/global/aus/investments/international-value-group.html",
+      "teamName": "International Value Group"
+    },
+    {
+      "categories": "Credit, Alternatives",
+      "strategyHref": "/global/aus/investments/emsights-capital-group/global-unconstrained-strategy.html",
+      "strategyName": "Global Unconstrained",
+      "teamHref": "/global/aus/investments/emsights-capital-group.html",
+      "teamName": "EMsights Capital Group"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/global-value-team/global-value-strategy.html",
+      "strategyName": "Global Value",
+      "teamHref": "/global/aus/investments/global-value-team.html",
+      "teamName": "Global Value"
+    },
+    {
+      "categories": "Credit",
+      "strategyHref": "/global/aus/investments/credit-team/high-income-strategy.html",
+      "strategyName": "High Income",
+      "teamHref": "/global/aus/investments/credit-team.html",
+      "teamName": "Credit"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/international-value-group/international-explorer-strategy.html",
+      "strategyName": "International Explorer",
+      "teamHref": "/global/aus/investments/international-value-group.html",
+      "teamName": "International Value Group"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/international-value-group/international-value-strategy.html",
+      "strategyName": "International Value",
+      "teamHref": "/global/aus/investments/international-value-group.html",
+      "teamName": "International Value Group"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/global-equity-team/non-us-growth-strategy.html",
+      "strategyName": "Non-U.S. Growth",
+      "teamHref": "/global/aus/investments/global-equity-team.html",
+      "teamName": "Global Equity"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/international-small-mid-team/non-us-small-mid-growth-strategy.html",
+      "strategyName": "Non-U.S. Small-Mid Growth",
+      "teamHref": "/global/aus/investments/international-small-mid-team.html",
+      "teamName": "International Small-Mid"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/global-value-team/select-equity-strategy.html",
+      "strategyName": "Select Equity",
+      "teamHref": "/global/aus/investments/global-value-team.html",
+      "teamName": "Global Value"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/sustainable-emerging-markets-team/sustainable-emerging-markets-strategy.html",
+      "strategyName": "Sustainable Emerging Markets",
+      "teamHref": "/global/aus/investments/sustainable-emerging-markets-team.html",
+      "teamName": "Sustainable Emerging Markets"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/growth-team/us-mid-cap-growth-strategy.html",
+      "strategyName": "U.S. Mid-Cap Growth",
+      "teamHref": "/global/aus/investments/growth-team.html",
+      "teamName": "Growth"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/us-value-team/us-mid-cap-value-strategy.html",
+      "strategyName": "U.S. Mid-Cap Value",
+      "teamHref": "/global/aus/investments/us-value-team.html",
+      "teamName": "U.S. Value"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/growth-team/us-small-cap-growth-strategy.html",
+      "strategyName": "U.S. Small-Cap Growth",
+      "teamHref": "/global/aus/investments/growth-team.html",
+      "teamName": "Growth"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/us-value-team/value-equity-strategy.html",
+      "strategyName": "Value Equity",
+      "teamHref": "/global/aus/investments/us-value-team.html",
+      "teamName": "U.S. Value"
+    },
+    {
+      "categories": "Equity",
+      "strategyHref": "/global/aus/investments/us-value-team/value-income-strategy.html",
+      "strategyName": "Value Income",
+      "teamHref": "/global/aus/investments/us-value-team.html",
+      "teamName": "U.S. Value"
+    }
+  ]
+}

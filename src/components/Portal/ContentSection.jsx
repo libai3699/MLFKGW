@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import AboutAwareLink from '../InvestorSite/AboutAwareLink';
 import { motion } from 'framer-motion';
 
 function RichParagraph({ parts }) {
@@ -10,9 +10,9 @@ function RichParagraph({ parts }) {
         }
 
         return (
-          <Link key={index} to={part.href}>
+          <AboutAwareLink key={index} to={part.href}>
             {part.label}
-          </Link>
+          </AboutAwareLink>
         );
       })}
     </p>

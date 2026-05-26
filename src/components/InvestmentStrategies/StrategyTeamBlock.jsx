@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import AboutAwareLink from '../InvestorSite/AboutAwareLink';
 
 export default function StrategyTeamBlock({ team }) {
   const [firstStrategy, ...restStrategies] = team.strategies;
@@ -24,7 +24,7 @@ export default function StrategyTeamBlock({ team }) {
           <div className="team-cell team-cell-spacer d-none d-md-block" aria-hidden="true" />
           <div className="team-cell">
             <span className="icon-video" aria-hidden="true" />
-            <Link to={team.processHref}>Investment Process</Link>
+            <AboutAwareLink to={team.processHref}>Investment Process</AboutAwareLink>
           </div>
         </div>
       )}

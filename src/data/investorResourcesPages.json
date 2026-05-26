@@ -1,0 +1,2231 @@
+{
+  "pageTitle": "Artisan Partners | Resources",
+  "heading": "Resources",
+  "filterOptions": [
+    {
+      "value": "all",
+      "label": "All"
+    },
+    {
+      "value": "cit",
+      "label": "Collective Investment Trust"
+    },
+    {
+      "value": "fund",
+      "label": "Mutual Fund"
+    },
+    {
+      "value": "strategy",
+      "label": "Separate Account"
+    },
+    {
+      "value": "artisanpartners:team-name/growth-team",
+      "label": "Growth Team"
+    },
+    {
+      "value": "artisanpartners:team-name/growth-team/global-opportunities-strategy",
+      "label": "Global Opportunities Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/growth-team/global-discovery-strategy",
+      "label": "Global Discovery Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/growth-team/us-mid-cap-growth-strategy",
+      "label": "U.S. Mid-Cap Growth Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/growth-team/us-small-cap-growth-strategy",
+      "label": "U.S. Small-Cap Growth Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/growth-team/franchise-strategy",
+      "label": "Franchise Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/global-equity-team",
+      "label": "Global Equity Team"
+    },
+    {
+      "value": "artisanpartners:team-name/global-equity-team/global-equity-strategy",
+      "label": "Global Equity Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/global-equity-team/non-us-growth-strategy",
+      "label": "Non-U.S. Growth Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/us-value-team",
+      "label": "U.S. Value Team"
+    },
+    {
+      "value": "artisanpartners:team-name/us-value-team/value-equity-strategy",
+      "label": "Value Equity Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/us-value-team/us-mid-cap-value-strategy",
+      "label": "U.S. Mid-Cap Value Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/us-value-team/value-income-strategy",
+      "label": "Value Income Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/international-value-group",
+      "label": "International Value Group"
+    },
+    {
+      "value": "artisanpartners:team-name/international-value-group/international-value-strategy",
+      "label": "International Value Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/international-value-group/international-explorer-strategy",
+      "label": "International Explorer Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/international-value-group/global-special-situations-strategy",
+      "label": "Global Special Situations Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/global-value-team",
+      "label": "Global Value Team"
+    },
+    {
+      "value": "artisanpartners:team-name/global-value-team/global-value-strategy",
+      "label": "Global Value Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/global-value-team/select-equity-strategy",
+      "label": "Select Equity Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/sustainable-emerging-markets-team",
+      "label": "Sustainable Emerging Markets Team"
+    },
+    {
+      "value": "artisanpartners:team-name/sustainable-emerging-markets-team/sustainable-emerging-markets-strategy",
+      "label": "Sustainable Emerging Markets Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/credit-team",
+      "label": "Credit Team"
+    },
+    {
+      "value": "artisanpartners:team-name/credit-team/high-income-strategy",
+      "label": "High Income Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/credit-team/credit-opportunities-strategy",
+      "label": "Credit Opportunities Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/credit-team/floating-rate-strategy",
+      "label": "Floating Rate Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/developing-world-team",
+      "label": "Developing World Team"
+    },
+    {
+      "value": "artisanpartners:team-name/developing-world-team/developing-world-strategy",
+      "label": "Developing World Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/antero-peak-group",
+      "label": "Antero Peak Group"
+    },
+    {
+      "value": "artisanpartners:team-name/antero-peak-group/antero-peak-strategy",
+      "label": "Antero Peak Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/international-small-mid-team",
+      "label": "International Small-Mid Team"
+    },
+    {
+      "value": "artisanpartners:team-name/international-small-mid-team/non-us-small-mid-growth-strategy",
+      "label": "Non-U.S. Small-Mid Growth Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/emsights-capital-group",
+      "label": "EMsights Capital Group"
+    },
+    {
+      "value": "artisanpartners:team-name/emsights-capital-group/emerging-markets-debt-opportunities-strategy",
+      "label": "Emerging Markets Debt Opportunities Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/emsights-capital-group/global-unconstrained-strategy",
+      "label": "Global Unconstrained Strategy"
+    },
+    {
+      "value": "artisanpartners:team-name/emsights-capital-group/emerging-markets-local-opportunities-strategy",
+      "label": "Emerging Markets Local Opportunities Strategy"
+    }
+  ],
+  "teamLegend": [
+    {
+      "teamSlug": "growth-team",
+      "label": "Growth"
+    },
+    {
+      "teamSlug": "credit-team",
+      "label": "Credit"
+    },
+    {
+      "teamSlug": "global-equity-team",
+      "label": "Global Equity"
+    },
+    {
+      "teamSlug": "developing-world-team",
+      "label": "Developing World"
+    },
+    {
+      "teamSlug": "us-value-team",
+      "label": "U.S. Value"
+    },
+    {
+      "teamSlug": "antero-peak-group",
+      "label": "Antero Peak Group"
+    },
+    {
+      "teamSlug": "international-value-group",
+      "label": "International Value Group"
+    },
+    {
+      "teamSlug": "international-small-mid-team",
+      "label": "International Small-Mid"
+    },
+    {
+      "teamSlug": "global-value-team",
+      "label": "Global Value"
+    },
+    {
+      "teamSlug": "emsights-capital-group",
+      "label": "EMsights Capital Group"
+    },
+    {
+      "teamSlug": "sustainable-emerging-markets-team",
+      "label": "Sustainable Emerging Markets"
+    }
+  ],
+  "rows": [
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": "artisanpartners:team-name/growth-team",
+      "name": "Global Opportunities Strategy",
+      "strategyHref": "/institutional-investors/investments/growth-team/global-opportunities-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/GlobalOpps-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/GlobalOpps-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Global Opportunities Fund (ARTRX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTRX-APDRX-APHRX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTRX-APDRX-APHRX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Global Opportunities Fund (APDRX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTRX-APDRX-APHRX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTRX-APDRX-APHRX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Global Opportunities Fund (APHRX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTRX-APDRX-APHRX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTRX-APDRX-APHRX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": "artisanpartners:team-name/growth-team",
+      "name": "Global Discovery Strategy",
+      "strategyHref": "/institutional-investors/investments/growth-team/global-discovery-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/GlobalDiscovery-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/GlobalDiscovery-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Global Discovery Fund (APFDX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFDX-APDDX-APHDX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFDX-APDDX-APHDX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Global Discovery Fund (APDDX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFDX-APDDX-APHDX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFDX-APDDX-APHDX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Global Discovery Fund (APHDX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFDX-APDDX-APHDX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFDX-APDDX-APHDX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": "artisanpartners:team-name/growth-team",
+      "name": "U.S. Mid-Cap Growth Strategy",
+      "strategyHref": "/institutional-investors/investments/growth-team/us-mid-cap-growth-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/USMidCapGrowth-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/USMidCapGrowth-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Mid Cap Fund (ARTMX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTMX-APDMX-APHMX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTMX-APDMX-APHMX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Mid Cap Fund (APDMX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTMX-APDMX-APHMX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTMX-APDMX-APHMX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Mid Cap Fund (APHMX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTMX-APDMX-APHMX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTMX-APDMX-APHMX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": "artisanpartners:team-name/growth-team",
+      "name": "U.S. Small-Cap Growth Strategy",
+      "strategyHref": "/institutional-investors/investments/growth-team/us-small-cap-growth-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/USSmCapGrowth-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/USSmCapGrowth-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Small Cap Fund (ARTSX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTSX-APDSX-APHSX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTSX-APDSX-APHSX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Small Cap Fund (APDSX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTSX-APDSX-APHSX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTSX-APDSX-APHSX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "growth-team",
+      "strategyTag": null,
+      "name": "Small Cap Fund (APHSX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTSX-APDSX-APHSX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTSX-APDSX-APHSX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-equity-team",
+      "strategyTag": "artisanpartners:team-name/global-equity-team",
+      "name": "Global Equity Strategy",
+      "strategyHref": "/institutional-investors/investments/global-equity-team/global-equity-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/GlobalEquity-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/GlobalEquity-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-equity-team",
+      "strategyTag": null,
+      "name": "Global Equity Fund (ARTHX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTHX-APDHX-APHHX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTHX-APDHX-APHHX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-equity-team",
+      "strategyTag": null,
+      "name": "Global Equity Fund (APDHX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTHX-APDHX-APHHX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTHX-APDHX-APHHX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-equity-team",
+      "strategyTag": null,
+      "name": "Global Equity Fund (APHHX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTHX-APDHX-APHHX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTHX-APDHX-APHHX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-equity-team",
+      "strategyTag": "artisanpartners:team-name/global-equity-team",
+      "name": "Non-U.S. Growth Strategy",
+      "strategyHref": "/institutional-investors/investments/global-equity-team/non-us-growth-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/NonUSGrowth-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/NonUSGrowth-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-equity-team",
+      "strategyTag": null,
+      "name": "International Fund (ARTIX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTIX-APDIX-APHIX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTIX-APDIX-APHIX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-equity-team",
+      "strategyTag": null,
+      "name": "International Fund (APDIX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTIX-APDIX-APHIX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTIX-APDIX-APHIX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-equity-team",
+      "strategyTag": null,
+      "name": "International Fund (APHIX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTIX-APDIX-APHIX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTIX-APDIX-APHIX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": "artisanpartners:team-name/us-value-team",
+      "name": "Value Equity Strategy",
+      "strategyHref": "/institutional-investors/investments/us-value-team/value-equity-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/ValueEquity-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/ValueEquity-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": null,
+      "name": "Value Fund (ARTLX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTLX-APDLX-APHLX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTLX-APDLX-APHLX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": null,
+      "name": "Value Fund (APDLX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTLX-APDLX-APHLX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTLX-APDLX-APHLX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": null,
+      "name": "Value Fund (APHLX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTLX-APDLX-APHLX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTLX-APDLX-APHLX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": "artisanpartners:team-name/us-value-team",
+      "name": "U.S. Mid-Cap Value Strategy",
+      "strategyHref": "/institutional-investors/investments/us-value-team/us-mid-cap-value-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/USMidCapValue-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/USMidCapValue-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": null,
+      "name": "Mid Cap Value Fund (ARTQX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTQX-APDQX-APHQX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTQX-APDQX-APHQX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": null,
+      "name": "Mid Cap Value Fund (APDQX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTQX-APDQX-APHQX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTQX-APDQX-APHQX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": null,
+      "name": "Mid Cap Value Fund (APHQX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTQX-APDQX-APHQX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTQX-APDQX-APHQX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": "artisanpartners:team-name/us-value-team",
+      "name": "Value Income Strategy",
+      "strategyHref": "/institutional-investors/investments/us-value-team/value-income-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/ValueIncome-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/ValueIncome-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": null,
+      "name": "Value Income Fund (APFWX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFWX-APDWX-APHWX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFWX-APDWX-APHWX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": null,
+      "name": "Value Income Fund (APDWX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFWX-APDWX-APHWX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFWX-APDWX-APHWX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "us-value-team",
+      "strategyTag": null,
+      "name": "Value Income Fund (APHWX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFWX-APDWX-APHWX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFWX-APDWX-APHWX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "international-value-group",
+      "strategyTag": "artisanpartners:team-name/international-value-group",
+      "name": "International Value Strategy",
+      "strategyHref": "/institutional-investors/investments/international-value-group/international-value-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/IntlValue-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/IntlValue-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "international-value-group",
+      "strategyTag": null,
+      "name": "International Value Fund (ARTKX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTKX-APDKX-APHKX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTKX-APDKX-APHKX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "international-value-group",
+      "strategyTag": null,
+      "name": "International Value Fund (APDKX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTKX-APDKX-APHKX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTKX-APDKX-APHKX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "international-value-group",
+      "strategyTag": null,
+      "name": "International Value Fund (APHKX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTKX-APDKX-APHKX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTKX-APDKX-APHKX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "international-value-group",
+      "strategyTag": "artisanpartners:team-name/international-value-group",
+      "name": "International Explorer Strategy",
+      "strategyHref": "/institutional-investors/investments/international-value-group/international-explorer-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/IntlExplorer-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/IntlExplorer-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "international-value-group",
+      "strategyTag": null,
+      "name": "International Explorer Fund (ARDBX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARDBX-ARHBX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARDBX-ARHBX-Fact-Sheet-4Q25-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "international-value-group",
+      "strategyTag": null,
+      "name": "International Explorer Fund (ARHBX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARDBX-ARHBX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARDBX-ARHBX-Fact-Sheet-4Q25-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-value-team",
+      "strategyTag": "artisanpartners:team-name/global-value-team",
+      "name": "Global Value Strategy",
+      "strategyHref": "/institutional-investors/investments/global-value-team/global-value-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/GlobalValue-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/GlobalValue-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-value-team",
+      "strategyTag": null,
+      "name": "Global Value Fund (ARTGX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTGX-APDGX-APHGX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTGX-APDGX-APHGX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-value-team",
+      "strategyTag": null,
+      "name": "Global Value Fund (APDGX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTGX-APDGX-APHGX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTGX-APDGX-APHGX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-value-team",
+      "strategyTag": null,
+      "name": "Global Value Fund (APHGX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTGX-APDGX-APHGX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTGX-APDGX-APHGX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-value-team",
+      "strategyTag": "artisanpartners:team-name/global-value-team",
+      "name": "Select Equity Strategy",
+      "strategyHref": "/institutional-investors/investments/global-value-team/select-equity-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/SelectEquity-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/SelectEquity-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-value-team",
+      "strategyTag": null,
+      "name": "Select Equity Fund (ARTNX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTNX-APDNX-APHNX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTNX-APDNX-APHNX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-value-team",
+      "strategyTag": null,
+      "name": "Select Equity Fund (APDNX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTNX-APDNX-APHNX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTNX-APDNX-APHNX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "global-value-team",
+      "strategyTag": null,
+      "name": "Select Equity Fund (APHNX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTNX-APDNX-APHNX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTNX-APDNX-APHNX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "sustainable-emerging-markets-team",
+      "strategyTag": "artisanpartners:team-name/sustainable-emerging-markets-team",
+      "name": "Sustainable Emerging Markets Strategy",
+      "strategyHref": "/institutional-investors/investments/sustainable-emerging-markets-team/sustainable-emerging-markets-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/SustainableEmergingMkts-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/SustainableEmergingMkts-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "sustainable-emerging-markets-team",
+      "strategyTag": null,
+      "name": "Sustainable Emerging Markets Fund (ARTZX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTZX-APDEX-APHEX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTZX-APDEX-APHEX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "sustainable-emerging-markets-team",
+      "strategyTag": null,
+      "name": "Sustainable Emerging Markets Fund (APDEX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTZX-APDEX-APHEX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTZX-APDEX-APHEX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "sustainable-emerging-markets-team",
+      "strategyTag": null,
+      "name": "Sustainable Emerging Markets Fund (APHEX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTZX-APDEX-APHEX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTZX-APDEX-APHEX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "credit-team",
+      "strategyTag": "artisanpartners:team-name/credit-team",
+      "name": "High Income Strategy",
+      "strategyHref": "/institutional-investors/investments/credit-team/high-income-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/HighIncome-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/HighIncome-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "credit-team",
+      "strategyTag": null,
+      "name": "High Income Fund (ARTFX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTFX-APDFX-APHFX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTFX-APDFX-APHFX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "credit-team",
+      "strategyTag": null,
+      "name": "High Income Fund (APDFX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTFX-APDFX-APHFX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTFX-APDFX-APHFX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "credit-team",
+      "strategyTag": null,
+      "name": "High Income Fund (APHFX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTFX-APDFX-APHFX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTFX-APDFX-APHFX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "credit-team",
+      "strategyTag": "artisanpartners:team-name/credit-team",
+      "name": "Floating Rate Strategy",
+      "strategyHref": "/institutional-investors/investments/credit-team/floating-rate-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/FloatingRate-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/FloatingRate-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "credit-team",
+      "strategyTag": null,
+      "name": "Floating Rate Fund (ARTUX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTUX-APDUX-APHUX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTUX-APDUX-APHUX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "credit-team",
+      "strategyTag": null,
+      "name": "Floating Rate Fund (APDUX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTUX-APDUX-APHUX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTUX-APDUX-APHUX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "credit-team",
+      "strategyTag": null,
+      "name": "Floating Rate Fund (APHUX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTUX-APDUX-APHUX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTUX-APDUX-APHUX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "developing-world-team",
+      "strategyTag": "artisanpartners:team-name/developing-world-team",
+      "name": "Developing World Strategy",
+      "strategyHref": "/institutional-investors/investments/developing-world-team/developing-world-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/DevWorld-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/DevWorld-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "developing-world-team",
+      "strategyTag": null,
+      "name": "Developing World Fund (ARTYX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTYX-APDYX-APHYX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTYX-APDYX-APHYX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "developing-world-team",
+      "strategyTag": null,
+      "name": "Developing World Fund (APDYX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTYX-APDYX-APHYX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTYX-APDYX-APHYX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "developing-world-team",
+      "strategyTag": null,
+      "name": "Developing World Fund (APHYX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTYX-APDYX-APHYX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTYX-APDYX-APHYX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "antero-peak-group",
+      "strategyTag": "artisanpartners:team-name/antero-peak-group",
+      "name": "Antero Peak Strategy",
+      "strategyHref": "/institutional-investors/investments/antero-peak-group/antero-peak-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/AnteroPeak-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/AnteroPeak-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "antero-peak-group",
+      "strategyTag": null,
+      "name": "Focus Fund (ARTTX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTTX-APDTX-APHTX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTTX-APDTX-APHTX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "antero-peak-group",
+      "strategyTag": null,
+      "name": "Focus Fund (APDTX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTTX-APDTX-APHTX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTTX-APDTX-APHTX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "antero-peak-group",
+      "strategyTag": null,
+      "name": "Focus Fund (APHTX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTTX-APDTX-APHTX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTTX-APDTX-APHTX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "international-small-mid-team",
+      "strategyTag": "artisanpartners:team-name/international-small-mid-team",
+      "name": "Non-U.S. Small-Mid Growth Strategy",
+      "strategyHref": "/institutional-investors/investments/international-small-mid-team/non-us-small-mid-growth-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/NonUSSmMidGrowth-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/NonUSSmMidGrowth-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "international-small-mid-team",
+      "strategyTag": null,
+      "name": "International Small-Mid Fund (ARTJX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTJX-APDJX-APHJX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTJX-APDJX-APHJX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "international-small-mid-team",
+      "strategyTag": null,
+      "name": "International Small-Mid Fund (APDJX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTJX-APDJX-APHJX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTJX-APDJX-APHJX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "international-small-mid-team",
+      "strategyTag": null,
+      "name": "International Small-Mid Fund (APHJX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/ARTJX-APDJX-APHJX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/ARTJX-APDJX-APHJX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "Log In | Register",
+        "locked": true
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "emsights-capital-group",
+      "strategyTag": "artisanpartners:team-name/emsights-capital-group",
+      "name": "Emerging Markets Debt Opportunities Strategy",
+      "strategyHref": "/institutional-investors/investments/emsights-capital-group/emerging-markets-debt-opportunities-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/EMDebtOpportunities-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/EMDebtOpportunities-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "emsights-capital-group",
+      "strategyTag": null,
+      "name": "Emerging Markets Debt Opportunities Fund (APFOX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFOX-APDOX-APHOX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFOX-APDOX-APHOX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "emsights-capital-group",
+      "strategyTag": null,
+      "name": "Emerging Markets Debt Opportunities Fund (APDOX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFOX-APDOX-APHOX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFOX-APDOX-APHOX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "emsights-capital-group",
+      "strategyTag": null,
+      "name": "Emerging Markets Debt Opportunities Fund (APHOX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFOX-APDOX-APHOX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFOX-APDOX-APHOX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "emsights-capital-group",
+      "strategyTag": "artisanpartners:team-name/emsights-capital-group",
+      "name": "Global Unconstrained Strategy",
+      "strategyHref": "/institutional-investors/investments/emsights-capital-group/global-unconstrained-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/GlobalUnconstrained-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/GlobalUnconstrained-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "emsights-capital-group",
+      "strategyTag": null,
+      "name": "Global Unconstrained Fund (APFPX)—Investor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFPX-APDPX-APHPX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFPX-APDPX-APHPX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "emsights-capital-group",
+      "strategyTag": null,
+      "name": "Global Unconstrained Fund (APDPX)—Advisor",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFPX-APDPX-APHPX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFPX-APDPX-APHPX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "emsights-capital-group",
+      "strategyTag": null,
+      "name": "Global Unconstrained Fund (APHPX)—Institutional",
+      "strategyHref": null,
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vr/2026/1q/APFPX-APDPX-APHPX-QCommentary-1Q26-vR.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vr/2026/1q/APFPX-APDPX-APHPX-Fact-Sheet-1Q26-vR.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    },
+    {
+      "type": "strategy",
+      "teamSlug": "emsights-capital-group",
+      "strategyTag": "artisanpartners:team-name/emsights-capital-group",
+      "name": "Emerging Markets Local Opportunities Strategy",
+      "strategyHref": "/institutional-investors/investments/emsights-capital-group/emerging-markets-local-opportunities-strategy",
+      "commentaries": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/quarterly-commentary/vxus/2026/1q/EMLocalOpportunities-QCommentary-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "factSheets": {
+        "label": "1Q 2026",
+        "href": "https://www.artisanpartners.com/content/dam/documents/fact-sheets/vxus/2026/1q/EMLocalOpportunities-Fact-Sheet-1Q26-vXUS.pdf",
+        "external": true
+      },
+      "attribution": {
+        "label": "",
+        "locked": false
+      },
+      "vehicles": [
+        "strategy"
+      ]
+    }
+  ],
+  "footnote": "Artisan Partners sub-advises collective investment trusts that are offered to certain tax qualified pension and profit sharing plans and governmental plans."
+}

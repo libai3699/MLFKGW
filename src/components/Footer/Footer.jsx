@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { footerContent } from '../../data/siteData';
 
@@ -21,13 +22,17 @@ export default function Footer({ onOpenModal }) {
                 {footerContent.links.map((link, index) => (
                   <span key={link.label}>
                     {index > 0 && <span> | </span>}
-                    <a
-                      href={link.href}
-                      target={link.external ? '_blank' : undefined}
-                      rel={link.external ? 'noopener noreferrer' : undefined}
-                    >
-                      {link.label}
-                    </a>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link to={link.href}>{link.label}</Link>
+                    )}
                   </span>
                 ))}
               </p>
