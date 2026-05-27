@@ -858,14 +858,6 @@ body.sustainability-site[data-nav-id='6'] .sustainability-inner-main .hero {
   padding: 30px 0;
 }
 
-@media (min-width: 992px) {
-  .sustainability-inner-main #page-title {
-    position: sticky;
-    top: 72px;
-    z-index: 1010;
-  }
-}
-
 .sustainability-inner-main #page-title h1 {
   margin: 0;
   color: #333;
@@ -880,9 +872,6 @@ body.sustainability-site[data-nav-id='6'] .sustainability-inner-main .hero {
 @media (min-width: 992px) {
   .sustainability-inner-main #secondary-nav {
     display: block;
-    position: sticky;
-    top: 170px;
-    z-index: 1009;
     background: #fff;
     border-bottom: 1px solid #ddd;
     padding: 0;

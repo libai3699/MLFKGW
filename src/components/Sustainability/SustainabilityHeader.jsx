@@ -8,7 +8,7 @@ export default function SustainabilityHeader({ activeNavId = 0 }) {
 
   return (
     <>
-      <header className="sustainability-header sticky-top" role="banner">
+      <header className="sustainability-header" role="banner">
         <div className="branding-wrapper">
           <div className="sustainability-container sustainability-header-inner">
             <Link to="/sustainability/home" className="sustainability-logo-link">

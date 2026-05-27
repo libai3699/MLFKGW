@@ -5,7 +5,7 @@ import {
   PressReleasesContent,
 } from '../components/InvestorSite/InvestorNewsInsightsContent';
 import InvestorSiteLayout from '../components/InvestorSite/InvestorSiteLayout';
-import { getNewsInsightsPage } from '../data/investorNewsInsightsData';
+import { getNewsInsightsContentKey, getNewsInsightsPage } from '../data/investorNewsInsightsData';
 import newsInsightsPages from '../data/investorNewsInsightsPages.json';
 import { getInvestorSite } from '../data/investorSitesData';
 import { getInvestorSiteKeyFromPathname } from '../utils/investorSiteRouting';
@@ -30,30 +30,40 @@ function ArtisanCanvasRedirect() {
   );
 }
 
+function getNewsInsightsRelativePath(pathname, siteKey) {
+  const prefix = `/${siteKey}/news-insights/`;
+  if (!pathname.startsWith(prefix)) {
+    return null;
+  }
+
+  return pathname.slice(prefix.length).replace(/\.html$/, '').replace(/\/$/, '');
+}
+
 export default function InvestorNewsInsightsPage() {
   const { section, pageSlug } = useParams();
   const location = useLocation();
   const siteKey = getInvestorSiteKeyFromPathname(location.pathname) || 'institutional-investors';
   const site = getInvestorSite(siteKey);
-  const path = pageSlug ? `${section}/${pageSlug}` : section;
+  const pathFromLocation = getNewsInsightsRelativePath(location.pathname, siteKey);
+  const path = pathFromLocation || (pageSlug ? `${section}/${pageSlug}` : section);
   const pageMeta = getNewsInsightsPage(siteKey, path);
-  const isContentPage = pageMeta?.contentPage && siteKey === 'investment-professionals';
+  const isContentPage =
+    pageMeta?.contentPage &&
+    (siteKey === 'investment-professionals' || siteKey === 'individual-investors');
+
+  const contentKey = pageMeta ? getNewsInsightsContentKey(siteKey, path) : null;
+  const listContentPage = contentKey ? newsInsightsPages[contentKey] : null;
 
   useEffect(() => {
-    if (isContentPage || !pageMeta || pageMeta.slug === 'artisan-canvas') {
+    if (isContentPage || !pageMeta || pageMeta.slug === 'artisan-canvas' || !listContentPage) {
       return undefined;
     }
 
-    const contentPage =
-      pageMeta.slug === 'press-releases'
-        ? newsInsightsPages.pressReleases
-        : newsInsightsPages.insights;
-
-    document.title = contentPage.pageTitle;
+    document.title = listContentPage.pageTitle;
     return () => {
       document.title = 'Artisan Partners - Global Investment Management Firm';
     };
-  }, [isContentPage, pageMeta]);
+  }, [isContentPage, listContentPage, pageMeta]);
 
   if (isContentPage) {
     return <InvestorProfessionalContentPage />;
@@ -86,16 +96,14 @@ export default function InvestorNewsInsightsPage() {
     );
   }
 
-  const contentPage =
-    pageMeta.slug === 'press-releases'
-      ? newsInsightsPages.pressReleases
-      : newsInsightsPages.insights;
+  if (!listContentPage) {
+    return <Navigate to={site.homeHref} replace />;
+  }
 
   const PageContent =
     pageMeta.slug === 'press-releases' ? PressReleasesContent : InsightsContent;
 
-  const heading =
-    pageMeta.slug === 'commentaries' ? 'Commentaries' : contentPage.heading;
+  const heading = listContentPage.heading;
 
   return (
     <InvestorSiteLayout site={site} pageHeading={heading}>
@@ -107,7 +115,7 @@ export default function InvestorNewsInsightsPage() {
         </div>
         <div className="section investor-about-section">
           <div className="container investor-container">
-            <PageContent page={contentPage} />
+            <PageContent page={listContentPage} />
           </div>
         </div>
       </div>

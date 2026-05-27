@@ -16,6 +16,7 @@ import {
   getInstitutionalInvestmentTeam,
 } from '../data/investorInvestmentsData';
 import investmentPages from '../data/investorInvestmentPages.json';
+import individualInvestmentPages from '../data/investorIndividualInvestmentPages.json';
 import professionalInvestmentPages from '../data/investorProfessionalInvestmentPages.json';
 import { getInvestorSite } from '../data/investorSitesData';
 import { getInvestorSiteKeyFromPathname } from '../utils/investorSiteRouting';
@@ -34,20 +35,26 @@ export default function InvestorInvestmentPage() {
   const normalizedTeamSlug = teamSlug?.replace(/\.html$/, '');
   const detailSlug = (fundSlug || strategySlug)?.replace(/\.html$/, '');
   const isProfessional = siteKey === 'investment-professionals';
-  const isFundPage = isProfessional && detailSlug && isFundSlug(detailSlug);
-  const isStrategyPage = !isProfessional && Boolean(detailSlug);
+  const isIndividual = siteKey === 'individual-investors';
+  const isFundSite = isProfessional || isIndividual;
+  const isFundPage = isFundSite && detailSlug && isFundSlug(detailSlug);
+  const isStrategyPage = siteKey === 'institutional-investors' && Boolean(detailSlug);
 
   const team = getInstitutionalInvestmentTeam(normalizedTeamSlug);
-  const strategyMatch =
-    !isProfessional && detailSlug
-      ? getInstitutionalInvestmentStrategy(normalizedTeamSlug, detailSlug)
-      : null;
+  const strategyMatch = isStrategyPage
+    ? getInstitutionalInvestmentStrategy(normalizedTeamSlug, detailSlug)
+    : null;
 
   const teamPage = isProfessional
     ? professionalInvestmentPages.teams[normalizedTeamSlug]
-    : investmentPages.teams[normalizedTeamSlug];
-  const fundPage =
-    isFundPage ? professionalInvestmentPages.funds[`${normalizedTeamSlug}/${detailSlug}`] : null;
+    : isIndividual
+      ? individualInvestmentPages.teams[normalizedTeamSlug]
+      : investmentPages.teams[normalizedTeamSlug];
+  const fundPage = isFundPage
+    ? (isProfessional
+        ? professionalInvestmentPages.funds[`${normalizedTeamSlug}/${detailSlug}`]
+        : individualInvestmentPages.funds[`${normalizedTeamSlug}/${detailSlug}`])
+    : null;
   const strategyPage =
     isStrategyPage ? investmentPages.strategies[`${normalizedTeamSlug}/${detailSlug}`] : null;
 
@@ -56,7 +63,6 @@ export default function InvestorInvestmentPage() {
     : isStrategyPage
       ? strategyPage || strategyMatch?.strategy
       : teamPage || team;
-  const pageHeading = pageMeta?.heading;
 
   useEffect(() => {
     if (!pageMeta) {
@@ -80,9 +86,11 @@ export default function InvestorInvestmentPage() {
 
     return (
       <InvestorSiteLayout site={site} pageHeading={fundPage.heading}>
-        <div id="page-wrapper" className="investor-fund-page-wrapper">
-          <ProfessionalFundPageHeader page={fundPage} />
-          <ProfessionalFundScrollSpy items={fundPage.scrollSpy} />
+        <div id="page-wrapper" className="investor-fund-page-wrapper investor-fund-page-shell">
+          <div className="investor-page-chrome-sticky">
+            <ProfessionalFundPageHeader page={fundPage} />
+            <ProfessionalFundScrollSpy items={fundPage.scrollSpy} />
+          </div>
           <ProfessionalFundPageBody page={fundPage} />
         </div>
       </InvestorSiteLayout>
@@ -120,21 +128,35 @@ export default function InvestorInvestmentPage() {
 
   return (
     <InvestorSiteLayout site={site} pageHeading={heading}>
-      <div id="page-wrapper">
-        <div id="page-title" className="investor-page-title">
-          <div className="container investor-container">
-            <h1>{heading}</h1>
+      <div
+        id="page-wrapper"
+        className={isFundSite ? 'investor-fund-page-wrapper investor-fund-page-shell' : undefined}
+      >
+        {isFundSite ? (
+          <div className="investor-page-chrome-sticky">
+            <div id="page-title" className="investor-page-title">
+              <div className="container investor-container">
+                <h1>{heading}</h1>
+              </div>
+            </div>
+            <ProfessionalFundScrollSpy items={teamPage.scrollSpy} />
           </div>
-        </div>
-        <div className="section investor-about-section">
-          <div className="container investor-container">
-            {isProfessional ? (
-              <ProfessionalTeamPageBody page={teamPage} />
-            ) : (
+        ) : (
+          <div id="page-title" className="investor-page-title">
+            <div className="container investor-container">
+              <h1>{heading}</h1>
+            </div>
+          </div>
+        )}
+        {isFundSite ? (
+          <ProfessionalTeamPageBody page={teamPage} teamSlug={normalizedTeamSlug} />
+        ) : (
+          <div className="section investor-about-section">
+            <div className="container investor-container">
               <TeamPageBody page={teamPage} teamSlug={normalizedTeamSlug} />
-            )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </InvestorSiteLayout>
   );

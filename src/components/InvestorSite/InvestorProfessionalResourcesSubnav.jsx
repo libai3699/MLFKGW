@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { professionalResourcesNav } from '../../data/investorProfessionalNavData';
 
-export default function InvestorProfessionalResourcesSubnav({ onNavigate }) {
-  const { items, taxCenter } = professionalResourcesNav;
+export default function InvestorProfessionalResourcesSubnav({ onNavigate, nav: navConfig }) {
+  const { items, taxCenter } = navConfig || professionalResourcesNav;
 
   return (
     <div className="investor-resources-subnav investor-resources-subnav-professional">

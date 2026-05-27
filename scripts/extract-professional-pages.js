@@ -306,14 +306,21 @@ function extractFundPage(html) {
 
 function extractTeamPage(html) {
   const processSection = extractBetween(html, 'title="Investment Process"', 'title="Meet the Team"');
+  const contentHtml = (
+    extractDivFromMarker(html, 'id="ss-1"', '<!-- end: #page-wrapper -->') || ''
+  ).replace(/<\/div>\s*$/i, '');
 
   return {
     pageTitle: extractPageTitle(html),
     heading: extractPageHeading(html),
     playlistId: html.match(/data-media-id="(\d+)"/)?.[1] || null,
+    scrollSpy: extractScrollSpy(html),
     sidebar: extractSidebar(html),
     investmentProcess: {
       blocks: extractRichContent(processSection),
+    },
+    content: {
+      html: contentHtml,
     },
     hasMainVideo: Boolean(html.match(/data-media-id="(\d+)"/)),
   };
@@ -336,8 +343,8 @@ function extractStaticPage(html) {
 
 function readPage(relativePath) {
   const candidates = [
-    join(pagesDir, `${relativePath}.html`),
     join(pagesDir, 'investment-professionals', `${relativePath}.html`),
+    join(pagesDir, `${relativePath}.html`),
   ];
 
   for (const filePath of candidates) {

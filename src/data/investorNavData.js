@@ -33,6 +33,7 @@ export const institutionalAboutPages = [
     slug: 'sustainability',
     label: 'Sustainability',
     href: '/sustainability/home',
+    external: true,
   },
 ];
 

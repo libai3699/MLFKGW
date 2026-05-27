@@ -229,6 +229,72 @@ function App() {
           path="/individual-investors.html"
           element={<InvestorSiteHomePage siteKey="individual-investors" />}
         />
+        <Route
+          path="/individual-investors/about-us/:pageSlug"
+          element={<InvestorAboutUsPage />}
+        />
+        <Route
+          path="/individual-investors/about-us/:pageSlug.html"
+          element={<InvestorAboutUsPage />}
+        />
+        <Route
+          path="/individual-investors/performance/:pageSlug"
+          element={<InvestorProfessionalContentPage />}
+        />
+        <Route
+          path="/individual-investors/performance/:pageSlug.html"
+          element={<InvestorProfessionalContentPage />}
+        />
+        <Route
+          path="/individual-investors/news-insights/artisan-canvas"
+          element={<InvestorNewsInsightsPage />}
+        />
+        <Route
+          path="/individual-investors/news-insights/artisan-canvas.html"
+          element={<InvestorNewsInsightsPage />}
+        />
+        <Route
+          path="/individual-investors/news-insights/advanced-document-filtering"
+          element={<InvestorNewsInsightsPage />}
+        />
+        <Route
+          path="/individual-investors/news-insights/advanced-document-filtering.html"
+          element={<InvestorNewsInsightsPage />}
+        />
+        <Route
+          path="/individual-investors/news-insights/:section/:pageSlug"
+          element={<InvestorNewsInsightsPage />}
+        />
+        <Route
+          path="/individual-investors/news-insights/:section/:pageSlug.html"
+          element={<InvestorNewsInsightsPage />}
+        />
+        <Route path="/individual-investors/resources/*" element={<InvestorProfessionalContentPage />} />
+        <Route
+          path="/individual-investors/investments/:teamSlug/:fundSlug"
+          element={<InvestorInvestmentPage />}
+        />
+        <Route
+          path="/individual-investors/investments/:teamSlug/:fundSlug.html"
+          element={<InvestorInvestmentPage />}
+        />
+        <Route path="/individual-investors/investments/:teamSlug" element={<InvestorInvestmentPage />} />
+        <Route
+          path="/individual-investors/investments/:teamSlug.html"
+          element={<InvestorInvestmentPage />}
+        />
+        <Route path="/individual-investors/terms-conditions" element={<InvestorProfessionalContentPage />} />
+        <Route path="/individual-investors/terms-conditions.html" element={<InvestorProfessionalContentPage />} />
+        <Route path="/individual-investors/privacy-policy" element={<InvestorProfessionalContentPage />} />
+        <Route path="/individual-investors/privacy-policy.html" element={<InvestorProfessionalContentPage />} />
+        <Route
+          path="/individual-investors/proxy-policies-and-voting-record"
+          element={<InvestorProfessionalContentPage />}
+        />
+        <Route
+          path="/individual-investors/proxy-policies-and-voting-record.html"
+          element={<InvestorProfessionalContentPage />}
+        />
         <Route path="/global/:countrySlug" element={<GlobalInvestorPage />} />
         <Route path="/global/:countrySlug.html" element={<GlobalInvestorPage />} />
         <Route path="/sustainability/home" element={<SustainabilityHomePage />} />

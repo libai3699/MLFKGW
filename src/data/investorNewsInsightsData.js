@@ -125,12 +125,79 @@ export function getProfessionalNewsInsightsPage(path) {
   );
 }
 
+export const individualNewsInsightsPages = [
+  {
+    slug: 'press-releases',
+    path: 'news/press-releases',
+    label: 'Press Releases',
+  },
+  {
+    slug: 'commentaries',
+    path: 'thought-leadership/commentaries',
+    label: 'Commentaries',
+    contentPage: true,
+  },
+  {
+    slug: 'insights',
+    path: 'thought-leadership/insights',
+    label: 'Insights',
+  },
+  {
+    slug: 'fact-sheets',
+    path: 'research-data/fact-sheets',
+    label: 'Fact Sheets',
+    contentPage: true,
+  },
+  {
+    slug: 'holdings',
+    path: 'research-data/holdings',
+    label: 'Holdings',
+    contentPage: true,
+  },
+  {
+    slug: 'advanced-document-filtering',
+    path: 'advanced-document-filtering',
+    label: 'Advanced Document Filtering',
+    contentPage: true,
+  },
+];
+
+export function getIndividualNewsInsightsPage(path) {
+  const normalized = path?.replace(/\.html$/, '').replace(/^\//, '');
+  return (
+    individualNewsInsightsPages.find((page) => page.path === normalized) ||
+    (normalized === 'artisan-canvas' || normalized === 'news-insights/artisan-canvas'
+      ? { slug: 'artisan-canvas', path: 'artisan-canvas', label: 'Artisan Canvas' }
+      : null)
+  );
+}
+
 export function getNewsInsightsPage(siteKey, path) {
   if (siteKey === 'investment-professionals') {
     return getProfessionalNewsInsightsPage(path);
   }
 
+  if (siteKey === 'individual-investors') {
+    return getIndividualNewsInsightsPage(path);
+  }
+
   return getInstitutionalNewsInsightsPage(path);
+}
+
+const NEWS_INSIGHTS_CONTENT_KEYS = {
+  'institutional-investors': {
+    'news/press-releases': 'pressReleases',
+    'thought-leadership/insights': 'insights',
+  },
+  'individual-investors': {
+    'news/press-releases': 'individualPressReleases',
+    'thought-leadership/insights': 'individualInsights',
+  },
+};
+
+export function getNewsInsightsContentKey(siteKey, path) {
+  const normalized = path?.replace(/\.html$/, '').replace(/^\//, '');
+  return NEWS_INSIGHTS_CONTENT_KEYS[siteKey]?.[normalized] || null;
 }
 
 export function isNewsInsightsActive(pathname) {

@@ -28,9 +28,9 @@ export default function InvestorSiteHomePage({ siteKey }) {
   }
 
   return (
-    <InvestorSiteLayout site={site}>
+    <InvestorSiteLayout site={site} pageClassName="investor-site-home">
       <div id="page-wrapper">
-        <InvestorCarousel slides={site.carouselSlides} />
+        {site.carouselSlides?.length > 0 && <InvestorCarousel slides={site.carouselSlides} />}
         {site.layout === 'institutional' && <InstitutionalHomeContent site={site} />}
         {site.layout === 'funds-professional' && <ProfessionalFundsContent site={site} />}
         {site.layout === 'funds-individual' && <IndividualFundsContent site={site} />}

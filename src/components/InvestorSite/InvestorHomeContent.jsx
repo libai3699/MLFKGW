@@ -275,9 +275,35 @@ function ProfessionalQuickLinks({ links, headingImage }) {
   );
 }
 
-function ProfessionalSidebar({ site }) {
+function toFundPath(href) {
+  if (!href || href.startsWith('http') || href.startsWith('/content/dam')) {
+    return null;
+  }
+
+  return href.replace(/\.html(?=($|\?|#))/, '');
+}
+
+function FundLink({ href, children }) {
+  const path = toFundPath(href);
+
+  if (!path) {
+    return children;
+  }
+
+  return <Link to={path}>{children}</Link>;
+}
+
+function toProfessionalFundPath(href) {
+  return toFundPath(href);
+}
+
+function ProfessionalFundLink({ href, children }) {
+  return <FundLink href={href}>{children}</FundLink>;
+}
+
+function FundsHomeSidebar({ site }) {
   return (
-    <aside className="side-bar-wrapper investor-professional-sidebar">
+    <aside className="side-bar-wrapper investor-funds-home-sidebar">
       <ProfessionalHighlights
         highlights={site.highlights}
         headingImage={site.sidebarHeadings?.highlights}
@@ -285,6 +311,10 @@ function ProfessionalSidebar({ site }) {
       <ProfessionalQuickLinks links={site.quickLinks} headingImage={site.sidebarHeadings?.quickLinks} />
     </aside>
   );
+}
+
+function ProfessionalSidebar({ site }) {
+  return <FundsHomeSidebar site={site} />;
 }
 
 export function ProfessionalFundsContent({ site }) {
@@ -332,15 +362,25 @@ export function ProfessionalFundsContent({ site }) {
                     <tbody>
                       {filteredFunds.map((fund) => (
                         <tr key={fund.fundName}>
-                          <td className="fund-name-cell">{fund.fundName}</td>
-                          <td>
-                            <Link to="#">{fund.investor.ticker}</Link>
+                          <td className="fund-name-cell">
+                            <ProfessionalFundLink href={fund.advisor?.href}>
+                              {fund.fundName}
+                            </ProfessionalFundLink>
                           </td>
                           <td>
-                            <Link to="#">{fund.advisor.ticker}</Link>
+                            <ProfessionalFundLink href={fund.investor?.href}>
+                              {fund.investor.ticker}
+                            </ProfessionalFundLink>
                           </td>
                           <td>
-                            <Link to="#">{fund.institutional.ticker}</Link>
+                            <ProfessionalFundLink href={fund.advisor?.href}>
+                              {fund.advisor.ticker}
+                            </ProfessionalFundLink>
+                          </td>
+                          <td>
+                            <ProfessionalFundLink href={fund.institutional?.href}>
+                              {fund.institutional.ticker}
+                            </ProfessionalFundLink>
                           </td>
                         </tr>
                       ))}
@@ -359,32 +399,99 @@ export function ProfessionalFundsContent({ site }) {
 }
 
 export function IndividualFundsContent({ site }) {
+  const categories = ['All', 'Equity', 'Credit', 'Alternatives'];
+  const [activeCategory, setActiveCategory] = useState('All');
+
+  const filteredFunds = site.funds.filter((fund) => {
+    if (activeCategory === 'All') {
+      return true;
+    }
+
+    return fund.categories.split(',').map((item) => item.trim()).includes(activeCategory);
+  });
+
   return (
     <div id="main" className="investor-main">
       <div className="container investor-container">
-        <section className="section">
-          <h2>Explore Our Funds</h2>
-          <div className="investor-table-wrap">
-            <table className="investor-table">
-              <thead>
-                <tr>
-                  <th>Fund</th>
-                  <th>Investment Team</th>
-                </tr>
-              </thead>
-              <tbody>
-                {site.funds.map((fund) => (
-                  <tr key={fund.label}>
-                    <td>
-                      <Link to="#">{fund.label}</Link>
-                    </td>
-                    <td>{fund.team}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <div className="investor-professional-row">
+          <div className="investor-professional-main">
+            <section className="section investor-funds-section">
+              <h2>Explore Our Funds</h2>
+              <div className="investor-funds-layout investor-individual-funds-layout">
+                <div className="investor-individual-fund-categories hidden-xs" aria-label="Fund categories">
+                  <table className="investor-table investor-individual-category-table">
+                    <tbody>
+                      {categories.map((category) => {
+                        const dataCategory = category === 'All' ? 'all' : category;
+                        const isSelected =
+                          activeCategory === category ||
+                          (category === 'All' && activeCategory === 'All');
+
+                        return (
+                          <tr key={category}>
+                            <td
+                              className={isSelected ? 'selected' : ''}
+                              data-category={dataCategory}
+                              role="button"
+                              tabIndex={0}
+                              onClick={() => setActiveCategory(category)}
+                              onKeyDown={(event) => {
+                                if (event.key === 'Enter' || event.key === ' ') {
+                                  event.preventDefault();
+                                  setActiveCategory(category);
+                                }
+                              }}
+                            >
+                              {category}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="investor-individual-funds-table-wrap hp-vertical-line">
+                  <div className="investor-individual-fund-categories visible-xs" aria-label="Fund categories">
+                    <div className="investor-fund-categories">
+                      {categories.map((category) => (
+                        <button
+                          key={category}
+                          type="button"
+                          className={activeCategory === category ? 'selected' : ''}
+                          onClick={() => setActiveCategory(category)}
+                        >
+                          {category}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="investor-table-wrap">
+                    <table className="investor-table investor-funds-table investor-individual-funds-table">
+                      <thead>
+                        <tr>
+                          <th>Fund Name</th>
+                          <th>Investment Team</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {filteredFunds.map((fund) => (
+                          <tr key={fund.label} data-category={fund.categories}>
+                            <td className="fund-name-cell">
+                              <FundLink href={fund.href}>{fund.label}</FundLink>
+                            </td>
+                            <td>{fund.team}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
-        </section>
+
+          <FundsHomeSidebar site={site} />
+        </div>
       </div>
     </div>
   );

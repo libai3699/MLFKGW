@@ -4,6 +4,7 @@ import InvestorInvestmentsSubnav from './InvestorInvestmentsSubnav';
 import InvestorNewsInsightsSubnav from './InvestorNewsInsightsSubnav';
 import InvestorProfessionalNewsInsightsSubnav from './InvestorProfessionalNewsInsightsSubnav';
 import InvestorProfessionalResourcesSubnav from './InvestorProfessionalResourcesSubnav';
+import { individualNewsInsightsNav, individualResourcesNav } from '../../data/investorIndividualNavData';
 import { getInstitutionalAboutHref } from '../../data/investorNavData';
 import {
   getInvestorAboutHrefResolver,
@@ -17,7 +18,9 @@ function hasSubnav(item) {
     item.subnavType === 'mega' ||
     item.subnavType === 'news-insights' ||
     item.subnavType === 'news-insights-professional' ||
-    item.subnavType === 'resources-professional'
+    item.subnavType === 'news-insights-individual' ||
+    item.subnavType === 'resources-professional' ||
+    item.subnavType === 'resources-individual'
   );
 }
 
@@ -37,6 +40,10 @@ export default function InvestorSiteHeader({ site, countryName, pageHeading }) {
   const location = useLocation();
   const homeHref = site.homeHref || (site.countrySlug ? `/global/${site.countrySlug}` : '/');
   const currentLabel = countryName || site.title;
+  const isProfessionalFundPage = /^\/investment-professionals\/investments\/[^/]+\/[^/]+/.test(
+    location.pathname,
+  );
+  const breadcrumbHeading = isProfessionalFundPage ? null : pageHeading;
   const [openSubnav, setOpenSubnav] = useState(null);
   const aboutBasePath = site.aboutBasePath || `${homeHref.replace(/\.html$/, '')}/about-us`;
   const closeSubnav = () => setOpenSubnav(null);
@@ -45,7 +52,9 @@ export default function InvestorSiteHeader({ site, countryName, pageHeading }) {
   const investmentsBasePath =
     site.id === 'investment-professionals'
       ? '/investment-professionals/investments'
-      : '/institutional-investors/investments';
+      : site.id === 'individual-investors'
+        ? '/individual-investors/investments'
+        : '/institutional-investors/investments';
 
   return (
     <header id="header" className="investor-site-header">
@@ -56,10 +65,10 @@ export default function InvestorSiteHeader({ site, countryName, pageHeading }) {
               <Link to={site.portalHref || '/'}>Artisan Partners</Link>
               <span className="investor-breadcrumb-sep">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</span>
               <Link to={homeHref}>{currentLabel}</Link>
-              {pageHeading && (
+              {breadcrumbHeading && (
                 <>
                   <span className="investor-breadcrumb-sep">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</span>
-                  <span>{pageHeading}</span>
+                  <span>{breadcrumbHeading}</span>
                 </>
               )}
             </div>
@@ -156,8 +165,20 @@ export default function InvestorSiteHeader({ site, countryName, pageHeading }) {
                             {item.subnavType === 'news-insights-professional' && (
                               <InvestorProfessionalNewsInsightsSubnav onNavigate={closeSubnav} />
                             )}
+                            {item.subnavType === 'news-insights-individual' && (
+                              <InvestorProfessionalNewsInsightsSubnav
+                                nav={individualNewsInsightsNav}
+                                onNavigate={closeSubnav}
+                              />
+                            )}
                             {item.subnavType === 'resources-professional' && (
                               <InvestorProfessionalResourcesSubnav onNavigate={closeSubnav} />
+                            )}
+                            {item.subnavType === 'resources-individual' && (
+                              <InvestorProfessionalResourcesSubnav
+                                nav={individualResourcesNav}
+                                onNavigate={closeSubnav}
+                              />
                             )}
                           </div>
                         </div>

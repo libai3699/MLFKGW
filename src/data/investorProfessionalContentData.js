@@ -1,10 +1,7 @@
-import contentPages from '../data/investorProfessionalContentPages.json';
-import { getInvestorSite } from '../data/investorSitesData';
+import { getInvestorContentPage, getProfessionalContentPage } from './investorSiteContentData';
+import { getInvestorSite } from './investorSitesData';
 
-export function getProfessionalContentPage(relativePath) {
-  const normalized = relativePath?.replace(/^\//, '').replace(/\.html$/, '');
-  return contentPages[normalized] || null;
-}
+export { getInvestorContentPage, getProfessionalContentPage };
 
 export function getProfessionalContentPageBySitePath(sitePath) {
   if (!sitePath) {

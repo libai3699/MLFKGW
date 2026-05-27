@@ -11,7 +11,10 @@
     "download-assets": "node scripts/download-assets.js",
     "download-sustainability-assets": "node scripts/download-sustainability-assets.mjs",
     "build:sustainability-content": "node scripts/build-sustainability-content.mjs",
-    "build:news-data": "node scripts/build-news-data.mjs"
+    "build:news-data": "node scripts/build-news-data.mjs",
+    "download-individual-pages": "node scripts/download-individual-pages.js",
+    "extract-individual-pages": "node scripts/extract-individual-pages.js",
+    "extract-individual-news-insights": "node scripts/extract-individual-news-insights-pages.js"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",

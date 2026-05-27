@@ -70,6 +70,64 @@ export const professionalHomeQuickLinks = [
   },
 ];
 
+const individualHomeCarouselSlide = {
+  bgColor: '#205580',
+  image: '/images/investor/carousel-home-lipper-award-GBLV-SELEQ-1800x280.jpg',
+  subhead: 'Recognized by Lipper',
+  title: 'Artisan Partners Global Value Team',
+  cta: {
+    label: 'Learn More',
+    href: '/individual-investors/news-insights/news/press-releases',
+  },
+};
+
+export const individualHomeHighlights = [
+  {
+    title: 'Bloomberg Surveillance—How the Chips Stack Up',
+    description: 'Portfolio Manager David Samra',
+    cta: 'Watch Now',
+    icon: 'video',
+    image:
+      'https://www.artisanpartners.com/content/dam/images/pm-viewpoints/INTV-Thumb-Bloomberg-Mar-2026.jpg',
+    href: '/individual-investors/news-insights/thought-leadership/insights/bloomberg-surveillance-how-the-chips-stack-up',
+  },
+  {
+    title: 'US Output—America’s Productive Renaissance',
+    description: 'Portfolio Manager Chris Smith',
+    cta: 'View Online',
+    icon: 'window',
+    image:
+      'https://www.artisanpartners.com/content/dam/images/insights/Antero-Peak-Insights-White-Paper-764x430.jpg',
+    href: 'https://www.artisanpartners.com/content/dam/documents/insights/vr/Peak-Insights-US-Output-Americas-Productive-Renaissance-vR.pdf',
+    external: true,
+  },
+  {
+    title: 'Citywire Elite Investor—Top value investors play the AI trade',
+    description: 'Portfolio Managers Dan O’Keefe and Mike McKinnon',
+    cta: 'View Online',
+    icon: 'window',
+    image:
+      'https://www.artisanpartners.com/content/dam/images/insights/gblv-citywire-elite-investor-reprint-website-thumbnail-764x430.jpg',
+    href: 'https://www.artisanpartners.com/content/dam/documents/reprints/mf/Citywire-Two-Value-Investors-Play-The-AI-Trade-vR.pdf',
+    external: true,
+  },
+];
+
+export const individualHomeQuickLinks = [
+  { label: 'Applications & Forms', href: '/individual-investors/resources/applications-forms' },
+  { label: 'Artisan Canvas Blog', href: '/individual-investors/news-insights/artisan-canvas' },
+  {
+    label: 'Current & Historical Distributions',
+    href: '/individual-investors/resources/tax-center/distributions',
+  },
+  { label: 'Go Paperless—Sign up for E-Delivery', href: '/individual-investors/resources/e-delivery' },
+  {
+    label: 'FINRA BrokerCheck',
+    href: 'http://brokercheck.finra.org',
+    external: true,
+  },
+];
+
 export const investorSites = {
   'institutional-investors': {
     id: 'institutional-investors',
@@ -105,9 +163,17 @@ export const investorSites = {
     title: 'Individual Investors',
     pageTitle: 'Artisan Partners | Individual Investors',
     homeHref: '/individual-investors',
+    aboutBasePath: '/individual-investors/about-us',
     portalHref: '/',
     layout: 'funds-individual',
+    carouselSlides: [individualHomeCarouselSlide],
     funds: extracted.individualFunds,
+    highlights: individualHomeHighlights,
+    quickLinks: individualHomeQuickLinks,
+    sidebarHeadings: {
+      highlights: '/images/investor/home-sidebar-heading-highlights-236x76-trans.png',
+      quickLinks: '/images/investor/home-side-bar-quick-links.png',
+    },
   },
 };
 

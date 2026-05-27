@@ -1,21 +1,32 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import {
   articleMatchesFilter,
   filterArticlesByTag,
   getResultSummary,
 } from '../../utils/investorNewsInsightsFilter';
+import { getInvestorSiteKeyFromPathname } from '../../utils/investorSiteRouting';
 
 const ORIGINAL_SITE = 'https://www.artisanpartners.com';
 const PAGE_SIZE = 20;
 
-function resolveArticleHref(href, external) {
+function resolveArticleHref(href, external, siteKey) {
   if (!href) {
     return href;
   }
 
   if (external || href.startsWith('http') || href.startsWith('/content/dam/')) {
     return href;
+  }
+
+  if (siteKey === 'individual-investors' || siteKey === 'investment-professionals') {
+    if (href.startsWith(`/${siteKey}/`)) {
+      if (/\/press-releases\/\d{4}\//.test(href)) {
+        return `${ORIGINAL_SITE}${href.endsWith('.html') ? href : `${href}.html`}`;
+      }
+
+      return href.replace(/\.html(?=($|\?|#))/, '');
+    }
   }
 
   if (href.startsWith('/institutional-investors/')) {
@@ -26,8 +37,14 @@ function resolveArticleHref(href, external) {
 }
 
 function ArticleHref({ href, external, className, children, title }) {
-  const resolvedHref = resolveArticleHref(href, external);
-  const isExternal = external || resolvedHref.startsWith('http') || resolvedHref.startsWith('/content/dam/');
+  const location = useLocation();
+  const siteKey = getInvestorSiteKeyFromPathname(location.pathname);
+  const resolvedHref = resolveArticleHref(href, external, siteKey);
+  const isExternal =
+    external ||
+    resolvedHref.startsWith('http') ||
+    resolvedHref.startsWith('/content/dam/') ||
+    resolvedHref.startsWith(ORIGINAL_SITE);
 
   if (isExternal) {
     return (
@@ -50,10 +67,10 @@ function ArticleHref({ href, external, className, children, title }) {
   );
 }
 
-function TeamFilter({ filterOptions, value, onChange, resultSummary }) {
+function TeamFilter({ filterOptions, value, onChange, resultSummary, filterLabel = 'Team/Strategy' }) {
   return (
     <div className="investor-news-filter">
-      <label htmlFor="tagselection">Team/Strategy</label>
+      <label htmlFor="tagselection">{filterLabel}</label>
       <select
         id="tagselection"
         name="tagselection"
@@ -159,6 +176,7 @@ export function PressReleasesContent({ page }) {
         value={filter}
         onChange={handleFilterChange}
         resultSummary={resultSummary}
+        filterLabel={page.filterLabel || 'Team/Strategy'}
       />
 
       {pageArticles.length === 0 && (
@@ -272,6 +290,7 @@ export function InsightsContent({ page }) {
         value={filter}
         onChange={handleFilterChange}
         resultSummary={resultSummary}
+        filterLabel={page.filterLabel || 'Team/Strategy'}
       />
 
       {showFeatured && (

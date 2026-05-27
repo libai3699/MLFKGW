@@ -230,12 +230,320 @@ export function hydrateFundCharts(root, { isProfessional = false } = {}) {
   });
 }
 
+function hydrateMorningstarRatingStars(root) {
+  if (!root) {
+    return;
+  }
+
+  root.querySelectorAll('span.mstar, div.mstar').forEach((element) => {
+    if (element.innerHTML.trim()) {
+      return;
+    }
+
+    const classRating = element.className.match(/mstar-(\d+)/)?.[1];
+    const dataRating = element.closest('td')?.getAttribute('data-text');
+    const rating = parseInt(classRating || dataRating, 10);
+
+    if (!Number.isFinite(rating) || rating <= 0) {
+      return;
+    }
+
+    element.innerHTML = Array.from({ length: rating }, () => '<span class="glyphicon glyphicon-star"></span>').join(
+      ' ',
+    );
+  });
+}
+
+function hydrateAccordionSections(root) {
+  if (!root) {
+    return () => {};
+  }
+
+  const cleanups = [];
+
+  root.querySelectorAll('.accordion-container .accordion-toggle a').forEach((link) => {
+    const container = link.closest('.accordion-container');
+    if (!container) {
+      return;
+    }
+
+    const handler = (event) => {
+      if (window.matchMedia('(min-width: 992px)').matches) {
+        return;
+      }
+
+      event.preventDefault();
+      container.classList.toggle('active');
+    };
+
+    link.addEventListener('click', handler);
+    cleanups.push(() => link.removeEventListener('click', handler));
+  });
+
+  return () => {
+    cleanups.forEach((cleanup) => cleanup());
+  };
+}
+
+const SHARE_CLASS_LABELS = {
+  Investor: 'Investor Class',
+  Advisor: 'Advisor Class',
+  Institutional: 'Institutional Class',
+};
+
+function getDefaultShareClass(wrapper) {
+  const disabledLink = wrapper.querySelector('.dropdown-menu li.disabled [data-share-class]');
+  if (disabledLink) {
+    return disabledLink.getAttribute('data-share-class');
+  }
+
+  const buttonText = wrapper.querySelector('.dropdown-toggle')?.textContent || '';
+  if (/institutional/i.test(buttonText)) {
+    return 'Institutional';
+  }
+  if (/advisor/i.test(buttonText)) {
+    return 'Advisor';
+  }
+
+  return 'Investor';
+}
+
+function applyPerformanceShareClassFilter(scope, shareClass, showIndices) {
+  if (!scope || !shareClass) {
+    return;
+  }
+
+  scope.querySelectorAll('table[id*="investment-returns"], table[id*="strategy-returns"]').forEach((table) => {
+    table.querySelectorAll('tbody tr[data-share-class]').forEach((row) => {
+      const rowShareClass = row.getAttribute('data-share-class');
+      const isIndex = row.classList.contains('fund-index');
+      const matchesShareClass = rowShareClass === shareClass;
+
+      if (!matchesShareClass) {
+        row.style.display = 'none';
+        return;
+      }
+
+      if (isIndex) {
+        row.style.display = showIndices ? '' : 'none';
+      } else {
+        row.style.display = '';
+      }
+    });
+  });
+
+  scope.querySelectorAll('table#morningstar-ratings, table#lipper-rankings').forEach((table) => {
+    table.querySelectorAll('tbody tr[data-share-class]').forEach((row) => {
+      const rowShareClass = row.getAttribute('data-share-class');
+      row.style.display = rowShareClass === shareClass ? '' : 'none';
+    });
+  });
+}
+
+function updateShareClassButtonLabel(button, shareClass) {
+  if (!button) {
+    return;
+  }
+
+  const caret = button.querySelector('.caret');
+  button.textContent = `${SHARE_CLASS_LABELS[shareClass] || shareClass} `;
+  if (caret) {
+    button.appendChild(caret);
+  }
+}
+
+function hydratePerformancePageInteractivity(root) {
+  if (!root?.querySelector('.performance-share-class-wrapper')) {
+    return () => {};
+  }
+
+  const cleanups = [];
+  const tabsSections = root.querySelectorAll('.tabs');
+
+  tabsSections.forEach((tabsSection) => {
+    const wrapper = tabsSection.querySelector('.performance-share-class-wrapper');
+    if (!wrapper) {
+      return;
+    }
+
+    const button = wrapper.querySelector('.dropdown-toggle');
+    const menu = wrapper.querySelector('.dropdown-menu');
+    const checkbox = tabsSection.querySelector('#show-indices');
+    const scope = tabsSection.closest('.row.subsection') || tabsSection.parentElement || root;
+    let shareClass = getDefaultShareClass(wrapper);
+    let showIndices = Boolean(checkbox?.checked);
+
+    const refreshFilter = () => {
+      applyPerformanceShareClassFilter(scope, shareClass, showIndices);
+    };
+
+    refreshFilter();
+
+    if (button) {
+      const toggleHandler = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        wrapper.classList.toggle('open');
+        button.setAttribute('aria-expanded', wrapper.classList.contains('open') ? 'true' : 'false');
+      };
+
+      button.addEventListener('click', toggleHandler);
+      cleanups.push(() => button.removeEventListener('click', toggleHandler));
+    }
+
+    if (menu) {
+      menu.querySelectorAll('[data-share-class]').forEach((link) => {
+        const selectHandler = (event) => {
+          event.preventDefault();
+          shareClass = link.getAttribute('data-share-class');
+          updateShareClassButtonLabel(button, shareClass);
+
+          menu.querySelectorAll('li').forEach((item) => {
+            const itemShareClass = item.querySelector('[data-share-class]')?.getAttribute('data-share-class');
+            item.classList.toggle('disabled', itemShareClass === shareClass);
+          });
+
+          wrapper.classList.remove('open');
+          button?.setAttribute('aria-expanded', 'false');
+          refreshFilter();
+        };
+
+        link.addEventListener('click', selectHandler);
+        cleanups.push(() => link.removeEventListener('click', selectHandler));
+      });
+    }
+
+    if (checkbox) {
+      const checkboxHandler = () => {
+        showIndices = checkbox.checked;
+        refreshFilter();
+      };
+
+      checkbox.addEventListener('change', checkboxHandler);
+      cleanups.push(() => checkbox.removeEventListener('change', checkboxHandler));
+    }
+  });
+
+  const outsideClickHandler = (event) => {
+    root.querySelectorAll('.performance-share-class-wrapper.open').forEach((wrapper) => {
+      if (!wrapper.contains(event.target)) {
+        wrapper.classList.remove('open');
+        wrapper.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+      }
+    });
+  };
+
+  document.addEventListener('click', outsideClickHandler);
+  cleanups.push(() => document.removeEventListener('click', outsideClickHandler));
+
+  return () => {
+    cleanups.forEach((cleanup) => cleanup());
+  };
+}
+
+function prepareLoadedHistoricalHtml(html) {
+  if (!html) {
+    return '';
+  }
+
+  return fixImagesFromDataAsset(
+    html
+      .replace(/src="\/content\/dam\//g, 'src="https://www.artisanpartners.com/content/dam/')
+      .replace(/href="\/content\/dam\//g, 'href="https://www.artisanpartners.com/content/dam/')
+      .replace(/href="\/individual-investors/g, 'href="/individual-investors')
+      .replace(/href="\/investment-professionals/g, 'href="/investment-professionals')
+      .replace(/\.html"/g, '"'),
+  );
+}
+
+function hydrateResourcesPageInteractivity(root) {
+  if (!root) {
+    return () => {};
+  }
+
+  const cleanups = [];
+  const fundSelectForm = root.querySelector('#fund-select');
+
+  if (fundSelectForm) {
+    const select = fundSelectForm.querySelector('select');
+    const containers = root.querySelectorAll('.fund-select-container');
+
+    if (select) {
+      const handler = (event) => {
+        const selected = event.target.value;
+
+        containers.forEach((container) => {
+          if (selected === 'all') {
+            container.classList.remove('hidden');
+          } else if (container.dataset.fund === selected) {
+            container.classList.remove('hidden');
+          } else {
+            container.classList.add('hidden');
+          }
+        });
+      };
+
+      select.addEventListener('change', handler);
+      cleanups.push(() => select.removeEventListener('change', handler));
+    }
+  }
+
+  const historicalForm = root.querySelector('#historical-distributions');
+  const historicalContainer = root.querySelector('#historical-distributions-container');
+
+  if (historicalForm && historicalContainer) {
+    const select = historicalForm.querySelector('select');
+
+    if (select) {
+      const handler = async (event) => {
+        const selected = event.target.value;
+        const selectedOption = select.options[select.selectedIndex];
+
+        if (!selected || selectedOption?.disabled) {
+          return;
+        }
+
+        historicalContainer.innerHTML =
+          '<img src="https://www.artisanpartners.com/content/dam/images/static/icon-loading.gif" alt="loading...">';
+
+        const site = window.location.pathname.includes('/individual-investors/')
+          ? 'individual-investors'
+          : 'investment-professionals';
+        const url = `${ASSET_BASE}/content/artisanpartners/en_us/${site}/resources/tax-center/distributions-historical/${selected}.html`;
+
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`Failed to load historical distributions (${response.status})`);
+          }
+
+          const html = await response.text();
+          historicalContainer.innerHTML = prepareLoadedHistoricalHtml(html);
+        } catch {
+          historicalContainer.innerHTML = '<p>Unable to load historical distributions.</p>';
+        }
+      };
+
+      select.addEventListener('change', handler);
+      cleanups.push(() => select.removeEventListener('change', handler));
+    }
+  }
+
+  return () => {
+    cleanups.forEach((cleanup) => cleanup());
+  };
+}
+
 export function hydrateFundInteractivity(root) {
   if (!root) {
     return () => {};
   }
 
   const cleanups = [];
+  cleanups.push(hydratePerformancePageInteractivity(root));
+  cleanups.push(hydrateAccordionSections(root));
+  cleanups.push(hydrateResourcesPageInteractivity(root));
+  hydrateMorningstarRatingStars(root);
 
   root.querySelectorAll('#important-disclosures .disclosure-toggle a').forEach((link) => {
     const section = link.closest('#important-disclosures');
@@ -272,10 +580,40 @@ export function hydrateFundInteractivity(root) {
     cleanups.push(() => link.removeEventListener('click', handler));
   });
 
+  root.querySelectorAll('.nav-tabs a[data-toggle="tab"], .nav-tabs a[role="tab"]').forEach((link) => {
+    const handler = (event) => {
+      event.preventDefault();
+
+      const targetSelector = link.getAttribute('href');
+      if (!targetSelector?.startsWith('#')) {
+        return;
+      }
+
+      const tabList = link.closest('.nav-tabs');
+      const scope = tabList?.parentElement;
+      const tabContent = scope?.querySelector('.tab-content') || scope?.nextElementSibling;
+
+      if (!tabList || !tabContent) {
+        return;
+      }
+
+      tabList.querySelectorAll('li').forEach((item) => item.classList.remove('active'));
+      link.closest('li')?.classList.add('active');
+
+      tabContent.querySelectorAll('.tab-pane').forEach((pane) => pane.classList.remove('active'));
+      tabContent.querySelector(targetSelector)?.classList.add('active');
+    };
+
+    link.addEventListener('click', handler);
+    cleanups.push(() => link.removeEventListener('click', handler));
+  });
+
   return () => {
     cleanups.forEach((cleanup) => cleanup());
   };
 }
+
+export { hydratePerformancePageInteractivity, hydrateResourcesPageInteractivity };
 
 export function fixImagesFromDataAsset(html) {
   if (!html) {

@@ -100,6 +100,21 @@ export function RichBlocks({ blocks }) {
         }
 
         if (block.type === 'paragraph') {
+          if (block.html && /<[a-z][\s\S]*>/i.test(block.html)) {
+            return (
+              <div
+                key={index}
+                className="investor-rich-html"
+                dangerouslySetInnerHTML={{
+                  __html: block.html.replace(
+                    /src="\/content\/dam\//g,
+                    'src="https://www.artisanpartners.com/content/dam/',
+                  ),
+                }}
+              />
+            );
+          }
+
           return <p key={index}>{block.text}</p>;
         }
 

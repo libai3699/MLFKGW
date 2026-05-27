@@ -5,6 +5,11 @@ import {
   isProfessionalNavItemActive,
   professionalMainNavItems,
 } from './investorProfessionalNavData';
+import {
+  getIndividualAboutHref,
+  individualMainNavItems,
+  isIndividualNavItemActive,
+} from './investorIndividualNavData';
 
 export const institutionalMainNavItems = [
   {
@@ -65,12 +70,20 @@ export function getInvestorMainNavItems(site) {
     return professionalMainNavItems;
   }
 
+  if (site?.id === 'individual-investors') {
+    return individualMainNavItems;
+  }
+
   return institutionalMainNavItems;
 }
 
 export function isInvestorNavItemActive(item, pathname, site) {
   if (site?.id === 'investment-professionals') {
     return isProfessionalNavItemActive(item, pathname);
+  }
+
+  if (site?.id === 'individual-investors') {
+    return isIndividualNavItemActive(item, pathname);
   }
 
   return isInstitutionalNavItemActive(item, pathname);
@@ -90,6 +103,10 @@ export function getInvestorAboutHrefResolver(site) {
 
       return `${basePath}/${page.slug}`;
     };
+  }
+
+  if (site?.id === 'individual-investors') {
+    return getIndividualAboutHref;
   }
 
   return null;

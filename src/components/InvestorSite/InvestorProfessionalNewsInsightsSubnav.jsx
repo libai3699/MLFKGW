@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import { professionalNewsInsightsNav } from '../../data/investorProfessionalNavData';
 
-export default function InvestorProfessionalNewsInsightsSubnav({ onNavigate }) {
-  const { news, thoughtLeadership, researchData, advancedFiltering, promo } = professionalNewsInsightsNav;
+export default function InvestorProfessionalNewsInsightsSubnav({ onNavigate, nav: navConfig }) {
+  const { news, thoughtLeadership, researchData, advancedFiltering, promo } =
+    navConfig || professionalNewsInsightsNav;
 
   return (
     <div className="investor-news-insights-subnav investor-news-insights-subnav-professional">
