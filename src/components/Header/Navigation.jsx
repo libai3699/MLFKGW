@@ -88,11 +88,22 @@ export default function Navigation({ isHome }) {
       ref={navRef}
     >
       <Link className="navbar-brand" to="/">
-        <img
-          className="img-fluid logo"
-          alt="Artisan Partners logo"
-          src="/images/aplp-logo.png"
-        />
+        {isHome ? (
+          <>
+            {/* <img
+              className="img-fluid logo"
+              alt="Artisan Partners logo"
+              src="/images/aplp-logo.png"
+            /> */}
+            <span className="img-fluid logo navbar-brand-spacer" aria-hidden="true" />
+          </>
+        ) : (
+          <img
+            className="img-fluid logo"
+            alt="Artisan Partners logo"
+            src="/images/aplp-logo.png"
+          />
+        )}
       </Link>
       <button
         className={`navbar-toggler ${menuOpen ? '' : 'collapsed'}`}

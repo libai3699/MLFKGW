@@ -110,11 +110,7 @@ export default function InvestorInvestmentPage() {
               <h1>{strategyPage.heading}</h1>
             </div>
           </div>
-          <div className="section investor-about-section">
-            <div className="container investor-container">
-              <StrategyPageBody page={strategyPage} teamSlug={normalizedTeamSlug} />
-            </div>
-          </div>
+          <StrategyPageBody page={strategyPage} teamSlug={normalizedTeamSlug} />
         </div>
       </InvestorSiteLayout>
     );
@@ -151,11 +147,7 @@ export default function InvestorInvestmentPage() {
         {isFundSite ? (
           <ProfessionalTeamPageBody page={teamPage} teamSlug={normalizedTeamSlug} />
         ) : (
-          <div className="section investor-about-section">
-            <div className="container investor-container">
-              <TeamPageBody page={teamPage} teamSlug={normalizedTeamSlug} />
-            </div>
-          </div>
+          <TeamPageBody page={teamPage} teamSlug={normalizedTeamSlug} />
         )}
       </div>
     </InvestorSiteLayout>

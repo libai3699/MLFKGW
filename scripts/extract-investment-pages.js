@@ -144,12 +144,68 @@ function extractSidebar(html) {
   return panels;
 }
 
+function extractDivFromMarker(html, idMarker, endMarker) {
+  const markerIndex = html.indexOf(idMarker);
+  if (markerIndex === -1) {
+    return '';
+  }
+
+  const divStart = html.lastIndexOf('<div', markerIndex);
+  const sliceStart = divStart === -1 ? markerIndex : divStart;
+  const end = html.indexOf(endMarker, markerIndex);
+
+  if (end === -1) {
+    return html.slice(sliceStart);
+  }
+
+  return html.slice(sliceStart, end);
+}
+
+function repairBrokenDivOpen(html) {
+  if (!html) {
+    return '';
+  }
+
+  return html.replace(/^id="([^"]+)"(\s[^>]*)?>/, '<div id="$1"$2>');
+}
+
+function balanceTrailingDivClosings(html) {
+  if (!html) {
+    return '';
+  }
+
+  let balanced = html.trim();
+  let openCount = (balanced.match(/<div/g) || []).length;
+  let closeCount = (balanced.match(/<\/div>/g) || []).length;
+
+  while (closeCount > openCount && /<\/div>\s*(<!--[\s\S]*?-->\s*)*$/.test(balanced)) {
+    balanced = balanced.replace(/\s*<\/div>(\s*(?:<!--[\s\S]*?-->)?\s*)$/, '$1').trim();
+    closeCount--;
+  }
+
+  return balanced;
+}
+
 function extractRichContent(html) {
   const blocks = [];
-  const regex = /<(p|h4|h3|ul class="bullets")[^>]*>([\s\S]*?)<\/\1>/g;
+  const regex =
+    /<(p|h3|h4)[^>]*>([\s\S]*?)<\/\1>|<ul class="bullets"[^>]*>([\s\S]*?)<\/ul>/g;
   let match = regex.exec(html);
 
   while (match) {
+    if (match[3] !== undefined) {
+      const items = [...match[3].matchAll(/<li[^>]*>([\s\S]*?)<\/li>/g)].map((item) =>
+        stripTags(item[1]),
+      );
+
+      if (items.length) {
+        blocks.push({ type: 'bullets', items });
+      }
+
+      match = regex.exec(html);
+      continue;
+    }
+
     const tag = match[1];
     const inner = match[2].trim();
     if (!inner) {
@@ -157,12 +213,7 @@ function extractRichContent(html) {
       continue;
     }
 
-    if (tag.startsWith('ul')) {
-      const items = [...inner.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/g)].map((item) =>
-        stripTags(item[1]),
-      );
-      blocks.push({ type: 'bullets', items });
-    } else if (tag === 'h3' || tag === 'h4') {
+    if (tag === 'h3' || tag === 'h4') {
       blocks.push({ type: tag, text: stripTags(inner) });
     } else if (/<a class="btn btn-default"/.test(inner)) {
       const btn = inner.match(/<a class="btn btn-default"[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/);
@@ -182,6 +233,78 @@ function extractRichContent(html) {
   }
 
   return blocks;
+}
+
+function extractSubsectionContent(html, heading) {
+  const subsectionRegex = new RegExp(
+    `<div class="row subsection">[\\s\\S]*?<h3>${heading}<\\/h3>[\\s\\S]*?<div class="col-md-9">\\s*<div>([\\s\\S]*?)<\\/div>\\s*<\\/div>\\s*<\\/div>`,
+  );
+
+  return html.match(subsectionRegex)?.[1] || '';
+}
+
+function extractManagementIntro(html) {
+  const match = html.match(
+    /<h3>Management<\/h3>[\s\S]*?<div class="col-md-9">\s*<div>([\s\S]*?)<\/div>\s*<\/div>\s*<\/div>/,
+  );
+
+  if (!match) {
+    return { html: '', text: '' };
+  }
+
+  const inner = match[1].trim();
+
+  return {
+    html: inner,
+    text: stripTags(inner),
+  };
+}
+
+function getMainContentEndMarker(html, fromIndex = 0) {
+  const ss2Index = html.indexOf('<div id="ss-2"', fromIndex);
+  if (ss2Index !== -1) {
+    return '<div id="ss-2"';
+  }
+
+  const disclosuresIndex = html.indexOf('id="important-disclosures"', fromIndex);
+  if (disclosuresIndex !== -1) {
+    return 'id="important-disclosures"';
+  }
+
+  return 'id="footer-wrapper"';
+}
+
+function extractStrategyMainHtml(html) {
+  const endMarker = getMainContentEndMarker(html);
+  const contentBlock = extractDivFromMarker(html, 'id="content-with-side-bar"', endMarker);
+
+  if (!contentBlock) {
+    return '';
+  }
+
+  const inner = contentBlock
+    .replace(/^<div id="content-with-side-bar"[^>]*>/, '')
+    .replace(/^id="content-with-side-bar"[^>]*>/, '');
+
+  return repairBrokenDivOpen(balanceTrailingDivClosings(inner));
+}
+
+function extractStrategySectionsHtml(html) {
+  const start = html.indexOf('<div id="ss-2"');
+  if (start === -1) {
+    return '';
+  }
+
+  const end = html.indexOf('id="important-disclosures"', start);
+  return end === -1 ? html.slice(start) : html.slice(start, end);
+}
+
+function extractImportantDisclosuresHtml(html) {
+  const block =
+    extractDivFromMarker(html, 'id="important-disclosures"', 'id="footer-wrapper"') ||
+    extractBetween(html, 'id="important-disclosures"', 'id="footer-wrapper"');
+
+  return repairBrokenDivOpen(block.trim());
 }
 
 function extractManagementCards(html) {
@@ -256,7 +379,8 @@ function extractAccordions(html) {
 }
 
 function extractTeamPage(html) {
-  const main = extractBetween(html, 'id="content-with-side-bar"', 'id="footer-wrapper"');
+  const main = extractBetween(html, 'id="content-with-side-bar"', 'id="important-disclosures"') ||
+    extractBetween(html, 'id="content-with-side-bar"', 'id="footer-wrapper"');
   const processSection = extractBetween(html, 'title="Investment Process"', 'title="Meet the Team"');
 
   return {
@@ -264,8 +388,13 @@ function extractTeamPage(html) {
     heading: extractPageHeading(html),
     playlistId: extractPlaylistId(html),
     sidebar: extractSidebar(html),
+    mainHtml: extractStrategyMainHtml(html),
+    sectionsHtml: extractStrategySectionsHtml(html),
+    disclosuresHtml: extractImportantDisclosuresHtml(html),
     investmentProcess: {
-      blocks: extractRichContent(processSection),
+      blocks: extractRichContent(
+        processSection || extractSubsectionContent(main, 'Investment Process'),
+      ),
     },
     teamMembers: extractTeamMembers(html),
     hasMainVideo: Boolean(extractPlaylistId(main)),
@@ -273,27 +402,28 @@ function extractTeamPage(html) {
 }
 
 function extractStrategyPage(html) {
-  const main = extractBetween(html, 'id="content-with-side-bar"', 'id="footer-wrapper"');
+  const main = extractBetween(html, 'id="content-with-side-bar"', 'id="important-disclosures"') ||
+    extractBetween(html, 'id="content-with-side-bar"', 'id="footer-wrapper"');
+  const managementIntro = extractManagementIntro(main);
 
   return {
     pageTitle: extractPageTitle(html),
     heading: extractPageHeading(html),
     sidebar: extractSidebar(html),
     introHeading: decodeHtml(main.match(/<h2>([^<]+)<\/h2>/)?.[1] || ''),
-    managementIntro: stripTags(
-      main.match(/<h3>Management<\/h3>[\s\S]*?<div class="col-md-9">[\s\S]*?<\/div>\s*<\/div>/)?.[0] ||
-        '',
-    ).replace(/^Management\s*/, ''),
+    managementIntro: managementIntro.text,
+    managementIntroHtml: managementIntro.html,
     managementCards: extractManagementCards(main),
-    investmentProcessBlocks: extractRichContent(
-      extractBetween(main, '<h3>Investment Process</h3>', '<h3>Other Strategies Managed</h3>') || main,
-    ),
-    otherStrategies: [...main.matchAll(/<h3>Other Strategies Managed<\/h3>[\s\S]*?<a href="([^"]+)">([^<]+)<\/a>/g)].map(
-      (match) => ({
-        href: localHref(match[1]),
-        label: decodeHtml(match[2]),
-      }),
-    ),
+    investmentProcessBlocks: extractRichContent(extractSubsectionContent(main, 'Investment Process')),
+    mainHtml: extractStrategyMainHtml(html),
+    sectionsHtml: extractStrategySectionsHtml(html),
+    disclosuresHtml: extractImportantDisclosuresHtml(html),
+    otherStrategies: [
+      ...main.matchAll(/<ul class="other-funds-managed">[\s\S]*?<a href="([^"]+)">([^<]+)<\/a>/g),
+    ].map((match) => ({
+      href: localHref(match[1]),
+      label: decodeHtml(match[2]),
+    })),
     playlistId: extractPlaylistId(main),
     accordions: extractAccordions(main),
   };

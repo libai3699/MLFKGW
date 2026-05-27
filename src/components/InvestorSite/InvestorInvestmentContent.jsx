@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import TeamProcessVideo from '../TeamProcess/TeamProcessVideo';
 import { teamProcessPages } from '../../data/teamProcessData';
+import InvestorFundRichHtml from './InvestorFundRichHtml';
+import { hydrateFundCharts, hydrateFundInteractivity } from '../../utils/investorFundChartHydration';
 
 const ASSET_BASE = 'https://www.artisanpartners.com';
 
@@ -263,9 +265,157 @@ export function InvestmentAccordions({ sections }) {
   );
 }
 
+function prepareStrategyHtml(html) {
+  if (!html) {
+    return '';
+  }
+
+  return html
+    .replace(/src="\/content\/dam\//g, 'src="https://www.artisanpartners.com/content/dam/')
+    .replace(/href="\/content\/dam\//g, 'href="https://www.artisanpartners.com/content/dam/')
+    .replace(/href="\/institutional-investors/g, 'href="/institutional-investors')
+    .replace(/\.html"/g, '"')
+    .replace(/<div id="footer-wrapper"[\s\S]*$/i, '')
+    .replace(/<\/body>[\s\S]*$/i, '')
+    .replace(/<script[\s\S]*?<\/script>/gi, '');
+}
+
+function StrategyDisclosuresSection({ html }) {
+  const preparedHtml = prepareStrategyHtml(html);
+
+  if (!preparedHtml) {
+    return null;
+  }
+
+  return (
+    <StrategyRichHtml
+      className="investor-strategy-disclosures investor-rich-html"
+      html={preparedHtml}
+    />
+  );
+}
+
+function StrategyRichHtml({ html, className = '' }) {
+  const containerRef = useRef(null);
+  const preparedHtml = prepareStrategyHtml(html);
+
+  useEffect(() => {
+    const cleanupInteractivity = hydrateFundInteractivity(containerRef.current);
+    hydrateFundCharts(containerRef.current, { isProfessional: false });
+
+    return cleanupInteractivity;
+  }, [preparedHtml]);
+
+  if (!preparedHtml) {
+    return null;
+  }
+
+  return (
+    <div
+      ref={containerRef}
+      className={className}
+      dangerouslySetInnerHTML={{ __html: preparedHtml }}
+    />
+  );
+}
+
+function StrategyAccordionSections({ html }) {
+  const preparedHtml = prepareStrategyHtml(html);
+
+  if (!preparedHtml) {
+    return null;
+  }
+
+  return (
+    <InvestorFundRichHtml
+      className="investor-strategy-accordion-sections investor-fund-accordion-sections investor-rich-html"
+      html={preparedHtml}
+    />
+  );
+}
+
+function renderManagementIntro(page) {
+  if (page.managementIntroHtml) {
+    return (
+      <div
+        className="investor-rich-html investor-strategy-management-intro"
+        dangerouslySetInnerHTML={{
+          __html: prepareStrategyHtml(page.managementIntroHtml),
+        }}
+      />
+    );
+  }
+
+  if (page.managementIntro) {
+    return <p>{page.managementIntro}</p>;
+  }
+
+  return null;
+}
+
+function filterInvestmentProcessBlocks(blocks) {
+  return (blocks || []).filter(
+    (block) => !(block.type === 'h3' && block.text === 'Investment Process'),
+  );
+}
+
+function stripTeamVideoFromHtml(html) {
+  if (!html || !html.includes('aplp-video-outer-wrapper')) {
+    return html;
+  }
+
+  return html.replace(
+    /<div class="row subsection">[\s\S]*?aplp-video-outer-wrapper[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/i,
+    '',
+  );
+}
+
 export function TeamPageBody({ page, teamSlug }) {
   const processPage = teamProcessPages[teamSlug];
   const playlistId = page.playlistId || processPage?.playlistId;
+  const showVideo = Boolean(playlistId && processPage && (page.hasMainVideo || page.mainHtml?.includes('aplp-video')));
+  const preparedMainHtml = stripTeamVideoFromHtml(page.mainHtml);
+
+  if (page.mainHtml || page.sectionsHtml) {
+    return (
+      <>
+        <div id="ss-1" className="section investor-about-section">
+          <div className="container investor-container">
+            <div className="main-wrapper right-page-grid investor-about-page-grid investor-investment-page">
+              <div className="right-page-main-col">
+                {showVideo && (
+                  <TeamProcessVideo
+                    key={teamSlug}
+                    teamSlug={teamSlug}
+                    playlistId={playlistId}
+                    videos={processPage.videos}
+                  />
+                )}
+                {preparedMainHtml && (
+                  <StrategyRichHtml
+                    className="investor-strategy-rich-html investor-rich-html investor-fund-intro"
+                    html={preparedMainHtml}
+                  />
+                )}
+                {!page.mainHtml && page.investmentProcess?.blocks?.length > 0 && (
+                  <section className="investor-content-section">
+                    <h2 className="investor-section-heading">Investment Process</h2>
+                    <RichBlocks blocks={page.investmentProcess.blocks} />
+                  </section>
+                )}
+                {!page.sectionsHtml && <TeamMembersSection members={page.teamMembers} />}
+              </div>
+              <div className="right-page-sidebar-col">
+                <InvestorInvestmentSidebar panels={page.sidebar} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <StrategyAccordionSections html={page.sectionsHtml} />
+        <StrategyDisclosuresSection html={page.disclosuresHtml} />
+      </>
+    );
+  }
 
   return (
     <div className="main-wrapper right-page-grid investor-about-page-grid investor-investment-page">
@@ -295,54 +445,115 @@ export function TeamPageBody({ page, teamSlug }) {
 
 export function StrategyPageBody({ page, teamSlug }) {
   const processPage = teamProcessPages[teamSlug];
+  const processBlocks = filterInvestmentProcessBlocks(page.investmentProcessBlocks);
+
+  if (page.mainHtml) {
+    return (
+      <>
+        <div id="ss-1" className="section investor-about-section">
+          <div className="container investor-container">
+            <div className="main-wrapper right-page-grid investor-about-page-grid investor-investment-page">
+              <div className="right-page-main-col">
+                <StrategyRichHtml
+                  className="investor-strategy-rich-html investor-rich-html investor-fund-intro"
+                  html={page.mainHtml}
+                />
+              </div>
+              <div className="right-page-sidebar-col">
+                <InvestorInvestmentSidebar panels={page.sidebar} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <StrategyAccordionSections html={page.sectionsHtml} />
+        <StrategyDisclosuresSection html={page.disclosuresHtml} />
+      </>
+    );
+  }
 
   return (
-    <div className="main-wrapper right-page-grid investor-about-page-grid investor-investment-page">
-      <div className="right-page-main-col">
-        {page.introHeading && <h2 className="investor-section-heading">{page.introHeading}</h2>}
+    <>
+      <div id="ss-1" className="section investor-about-section">
+        <div className="container investor-container">
+          <div className="main-wrapper right-page-grid investor-about-page-grid investor-investment-page">
+            <div className="right-page-main-col">
+              {page.introHeading && <h2 className="investor-section-heading">{page.introHeading}</h2>}
 
-        {(page.managementIntro || page.managementCards?.length > 0) && (
-          <section className="investor-content-section">
-            <h3>Management</h3>
-            {page.managementIntro && <p>{page.managementIntro}</p>}
-            <ManagementCards cards={page.managementCards} />
-          </section>
-        )}
+              {(page.managementIntro || page.managementIntroHtml || page.managementCards?.length > 0) && (
+                <section className="investor-content-section investor-strategy-subsection">
+                  <div className="row subsection">
+                    <div className="col-md-3">
+                      <h3>Management</h3>
+                    </div>
+                    <div className="col-md-9">
+                      {renderManagementIntro(page)}
+                    </div>
+                  </div>
+                  {page.managementCards?.length > 0 && (
+                    <div className="row subsection">
+                      <div className="col-md-9 col-md-offset-3">
+                        <ManagementCards cards={page.managementCards} />
+                      </div>
+                    </div>
+                  )}
+                </section>
+              )}
 
-        {page.investmentProcessBlocks?.length > 0 && (
-          <section className="investor-content-section">
-            <h3>Investment Process</h3>
-            <RichBlocks blocks={page.investmentProcessBlocks} />
-          </section>
-        )}
+              {processBlocks.length > 0 && (
+                <section className="investor-content-section investor-strategy-subsection">
+                  <div className="row subsection">
+                    <div className="col-md-3">
+                      <h3>Investment Process</h3>
+                    </div>
+                    <div className="col-md-9">
+                      <RichBlocks blocks={processBlocks} />
+                    </div>
+                  </div>
+                </section>
+              )}
 
-        {page.playlistId && processPage && (
-          <TeamProcessVideo
-            key={`${teamSlug}-strategy`}
-            teamSlug={teamSlug}
-            playlistId={page.playlistId}
-            videos={processPage.videos}
-          />
-        )}
+              {page.playlistId && processPage && (
+                <TeamProcessVideo
+                  key={`${teamSlug}-strategy`}
+                  teamSlug={teamSlug}
+                  playlistId={page.playlistId}
+                  videos={processPage.videos}
+                />
+              )}
 
-        {page.otherStrategies?.length > 0 && (
-          <section className="investor-content-section">
-            <h3>Other Strategies Managed</h3>
-            <ul className="investor-strategy-link-list">
-              {page.otherStrategies.map((item) => (
-                <li key={item.href}>
-                  <Link to={item.href}>{item.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        <InvestmentAccordions sections={page.accordions} />
+              {page.otherStrategies?.length > 0 && (
+                <section className="investor-content-section investor-strategy-subsection">
+                  <div className="row subsection">
+                    <div className="col-md-3">
+                      <h3>Other Strategies Managed</h3>
+                    </div>
+                    <div className="col-md-9">
+                      <ul className="other-funds-managed">
+                        {page.otherStrategies.map((item) => (
+                          <li key={item.href}>
+                            <Link to={item.href}>{item.label}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              )}
+            </div>
+            <div className="right-page-sidebar-col">
+              <InvestorInvestmentSidebar panels={page.sidebar} />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="right-page-sidebar-col">
-        <InvestorInvestmentSidebar panels={page.sidebar} />
-      </div>
-    </div>
+      {page.sectionsHtml ? (
+        <StrategyAccordionSections html={page.sectionsHtml} />
+      ) : (
+        <div className="container investor-container">
+          <InvestmentAccordions sections={page.accordions} />
+        </div>
+      )}
+      <StrategyDisclosuresSection html={page.disclosuresHtml} />
+    </>
   );
 }

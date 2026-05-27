@@ -49,6 +49,11 @@ header .bottom-wrapper .logo {
   object-fit: contain;
 }
 
+header .bottom-wrapper .navbar-brand-spacer {
+  display: block;
+  flex-shrink: 0;
+}
+
 header .bottom-wrapper .navbar-brand {
   flex-basis: 60%;
   margin-right: auto;
