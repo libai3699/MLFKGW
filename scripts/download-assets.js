@@ -24,6 +24,7 @@ async function download(url, dest) {
 }
 
 const assets = [
+  ['/etc/designs/artisanpartners/favicon.ico', 'favicon.ico'],
   ['/content/dam/artisan-portal/static/aplp-logo.png', 'images/aplp-logo.png'],
   ['/content/dam/artisan-portal/static/background.jpg', 'images/background.jpg'],
   ['/content/dam/artisan-portal/static/list.png', 'images/list.png'],
