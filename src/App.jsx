@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -20,15 +20,16 @@ import ContactUsPage from './pages/ContactUsPage';
 import LegalPage from './pages/LegalPage';
 import InvestorSiteHomePage from './pages/InvestorSiteHomePage';
 import InvestorAboutUsPage from './pages/InvestorAboutUsPage';
-import InvestorInvestmentPage from './pages/InvestorInvestmentPage';
-import InvestorNewsInsightsPage from './pages/InvestorNewsInsightsPage';
-import InvestorProfessionalContentPage from './pages/InvestorProfessionalContentPage';
-import InvestorDefinedContributionPage from './pages/InvestorDefinedContributionPage';
-import InvestorResourcesPage from './pages/InvestorResourcesPage';
 import GlobalInvestorPage from './pages/GlobalInvestorPage';
 import SustainabilityHomePage from './pages/SustainabilityHomePage';
-import SustainabilityContentPage from './pages/SustainabilityContentPage';
 import './App.css';
+
+const InvestorInvestmentPage = lazy(() => import('./pages/InvestorInvestmentPage.jsx'));
+const InvestorNewsInsightsPage = lazy(() => import('./pages/InvestorNewsInsightsPage.jsx'));
+const InvestorProfessionalContentPage = lazy(() => import('./pages/InvestorProfessionalContentPage.jsx'));
+const InvestorDefinedContributionPage = lazy(() => import('./pages/InvestorDefinedContributionPage.jsx'));
+const InvestorResourcesPage = lazy(() => import('./pages/InvestorResourcesPage.jsx'));
+const SustainabilityContentPage = lazy(() => import('./pages/SustainabilityContentPage.jsx'));
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -57,6 +58,7 @@ function App() {
     >
       {!isSustainability && !isInvestorSite && <Header onOpenModal={() => openModal()} isHome={isHome} />}
 
+      <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<HomePage onSelectChannel={(id) => openModal(id)} />} />
         <Route path="/about-us/overview" element={<OverviewPage />} />
@@ -300,6 +302,7 @@ function App() {
         <Route path="/sustainability/home" element={<SustainabilityHomePage />} />
         <Route path="/sustainability/:slug" element={<SustainabilityContentPage />} />
       </Routes>
+      </Suspense>
 
       {!isSustainability && !isInvestorSite && <Footer />}
 

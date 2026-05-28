@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Suspense, use, useEffect, useMemo } from 'react';
 import { Navigate, useLocation, useParams } from 'react-router-dom';
 import {
   StrategyPageBody,
@@ -15,9 +15,6 @@ import {
   getInstitutionalInvestmentStrategy,
   getInstitutionalInvestmentTeam,
 } from '../data/investorInvestmentsData';
-import investmentPages from '../data/investorInvestmentPages.json';
-import individualInvestmentPages from '../data/investorIndividualInvestmentPages.json';
-import professionalInvestmentPages from '../data/investorProfessionalInvestmentPages.json';
 import { getInvestorSite } from '../data/investorSitesData';
 import { getInvestorSiteKeyFromPathname } from '../utils/investorSiteRouting';
 import './investor-site.css';
@@ -27,11 +24,20 @@ function isFundSlug(slug) {
   return slug?.includes('-fund-');
 }
 
-export default function InvestorInvestmentPage() {
+function loadInvestmentPages(siteKey) {
+  switch (siteKey) {
+    case 'individual-investors':
+      return import('../data/investorIndividualInvestmentPages.json').then((module) => module.default);
+    case 'investment-professionals':
+      return import('../data/investorProfessionalInvestmentPages.json').then((module) => module.default);
+    default:
+      return import('../data/investorInvestmentPages.json').then((module) => module.default);
+  }
+}
+
+function InvestorInvestmentPageContent({ siteKey, site }) {
   const { teamSlug, strategySlug, fundSlug } = useParams();
-  const location = useLocation();
-  const siteKey = getInvestorSiteKeyFromPathname(location.pathname) || 'institutional-investors';
-  const site = getInvestorSite(siteKey);
+  const investmentPages = use(useMemo(() => loadInvestmentPages(siteKey), [siteKey]));
   const normalizedTeamSlug = teamSlug?.replace(/\.html$/, '');
   const detailSlug = (fundSlug || strategySlug)?.replace(/\.html$/, '');
   const isProfessional = siteKey === 'investment-professionals';
@@ -46,17 +52,18 @@ export default function InvestorInvestmentPage() {
     : null;
 
   const teamPage = isProfessional
-    ? professionalInvestmentPages.teams[normalizedTeamSlug]
+    ? investmentPages.teams[normalizedTeamSlug]
     : isIndividual
-      ? individualInvestmentPages.teams[normalizedTeamSlug]
+      ? investmentPages.teams[normalizedTeamSlug]
       : investmentPages.teams[normalizedTeamSlug];
   const fundPage = isFundPage
-    ? (isProfessional
-        ? professionalInvestmentPages.funds[`${normalizedTeamSlug}/${detailSlug}`]
-        : individualInvestmentPages.funds[`${normalizedTeamSlug}/${detailSlug}`])
+    ? isProfessional
+      ? investmentPages.funds[`${normalizedTeamSlug}/${detailSlug}`]
+      : investmentPages.funds[`${normalizedTeamSlug}/${detailSlug}`]
     : null;
-  const strategyPage =
-    isStrategyPage ? investmentPages.strategies[`${normalizedTeamSlug}/${detailSlug}`] : null;
+  const strategyPage = isStrategyPage
+    ? investmentPages.strategies[`${normalizedTeamSlug}/${detailSlug}`]
+    : null;
 
   const pageMeta = isFundPage
     ? fundPage
@@ -74,10 +81,6 @@ export default function InvestorInvestmentPage() {
       document.title = 'Artisan Partners - Global Investment Management Firm';
     };
   }, [pageMeta]);
-
-  if (!site) {
-    return <Navigate to="/" replace />;
-  }
 
   if (isFundPage) {
     if (!fundPage) {
@@ -151,5 +154,21 @@ export default function InvestorInvestmentPage() {
         )}
       </div>
     </InvestorSiteLayout>
+  );
+}
+
+export default function InvestorInvestmentPage() {
+  const location = useLocation();
+  const siteKey = getInvestorSiteKeyFromPathname(location.pathname) || 'institutional-investors';
+  const site = getInvestorSite(siteKey);
+
+  if (!site) {
+    return <Navigate to="/" replace />;
+  }
+
+  return (
+    <Suspense fallback={null}>
+      <InvestorInvestmentPageContent siteKey={siteKey} site={site} />
+    </Suspense>
   );
 }
