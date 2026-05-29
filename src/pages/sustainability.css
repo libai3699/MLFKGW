@@ -12,6 +12,9 @@ body.sustainability-site {
   font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
   font-size: 16px;
   margin: 0;
+  --sus-header-height: 72px;
+  --sus-title-height: 98px;
+  scroll-behavior: smooth;
 }
 
 .sustainability-page {
@@ -44,10 +47,40 @@ body.sustainability-site {
   z-index: 1020;
 }
 
+/* Sticky stacked navigation (header -> page title -> secondary nav) */
+.sustainability-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.sustainability-inner-main #page-title.sticky-lg-top,
+.sustainability-inner-main #secondary-nav.sticky-lg-top {
+  position: static;
+}
+
+@media (min-width: 992px) {
+  .sustainability-inner-main #page-title.sticky-lg-top {
+    position: sticky;
+    top: var(--sus-header-height, 72px);
+    z-index: 1021;
+  }
+
+  .sustainability-inner-main #secondary-nav.sticky-lg-top {
+    position: sticky;
+    top: calc(var(--sus-header-height, 72px) + var(--sus-title-height, 98px));
+    z-index: 1020;
+  }
+}
+
 /* Header */
 .sustainability-header .branding-wrapper {
-  background: #414141;
+  background: rgba(20, 26, 30, 0.72);
+  -webkit-backdrop-filter: blur(13px) saturate(150%);
+  backdrop-filter: blur(13px) saturate(150%);
   padding: 15px 0;
+  border-bottom: 1px solid rgba(144, 155, 66, 0.34);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.32);
 }
 
 .sustainability-header-inner {
@@ -387,9 +420,35 @@ body.sustainability-site {
 
 /* Hero */
 .sustainability-page .hero.home {
+  position: relative;
   color: #fff;
   background: linear-gradient(105deg, #242e49, #005543);
   padding: 60px 0;
+  overflow: hidden;
+}
+
+.sustainability-page .hero.home::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 60%;
+  height: 160%;
+  background: radial-gradient(closest-side, rgba(144, 155, 66, 0.28), transparent 70%);
+  pointer-events: none;
+}
+
+.sustainability-page .hero.home::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 80% at 15% 0%, rgba(255, 255, 255, 0.06), transparent 55%);
+  pointer-events: none;
+}
+
+.sustainability-page .hero.home .sustainability-container {
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 992px) {
@@ -447,6 +506,16 @@ body.sustainability-site {
   line-height: 1.5;
 }
 
+.sustainability-page .hero .hero-report-title::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin-top: 1.25rem;
+  background: #909b42;
+  border-radius: 2px;
+}
+
 @media (min-width: 1200px) {
   .sustainability-page .hero .hero-report-title {
     font-size: 1.4375rem;
@@ -457,25 +526,44 @@ body.sustainability-site {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.6;
+  max-width: 60ch;
 }
 
 .hero-copy-col p {
-  margin: 0 0 1rem;
+  margin: 0 0 1.1rem;
 }
 
 .hero-copy-col p:last-child {
   margin-bottom: 0;
 }
 
+.hero-copy-col .hero-lead {
+  font-size: 1.7rem;
+  line-height: 1.55;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .hero-copy-col .hero-lead {
+    font-size: 1.5rem;
+  }
+}
+
+.hero-copy-col p:not(.hero-lead) {
+  color: #d7e0dc;
+  font-size: 1.18rem;
+  line-height: 1.7;
+}
+
 /* Homepage nav cards */
 #homepage-nav {
-  padding: 60px 0;
+  padding: 72px 0 84px;
 }
 
 .homepage-nav-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 28px;
 }
 
 @media (min-width: 576px) {
@@ -502,26 +590,67 @@ body.sustainability-site {
 
 .homepage-nav-link:hover,
 .homepage-nav-link:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .homepage-nav-link .card {
+  position: relative;
   border: 0;
-  border-radius: 0;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.18);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100%;
   min-height: 220px;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+
+.homepage-nav-link:hover .card,
+.homepage-nav-link:focus-visible .card {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgb(0 0 0 / 0.28);
 }
 
 .homepage-nav-link .card-body {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
   color: #fff;
-  padding: 60% 30px 30px;
+  padding: 60% 26px 26px;
   transition: clip-path 0.2s ease-in-out;
   min-height: 220px;
   box-sizing: border-box;
+}
+
+.homepage-nav-label {
+  display: block;
+}
+
+.homepage-nav-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  margin-bottom: 4px;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.homepage-nav-link:hover .homepage-nav-arrow,
+.homepage-nav-link:focus-visible .homepage-nav-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .bg-blue-gradient {
@@ -875,6 +1004,7 @@ body.sustainability-site[data-nav-id='6'] .sustainability-inner-main .hero {
     background: #fff;
     border-bottom: 1px solid #ddd;
     padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   }
 }
 
@@ -890,8 +1020,10 @@ body.sustainability-site[data-nav-id='6'] .sustainability-inner-main .hero {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 0.9rem;
+  letter-spacing: 0.02em;
   padding: 0.85rem 1rem 0.5rem;
   text-decoration: none;
+  transition: color 0.18s ease, border-bottom-color 0.18s ease;
 }
 
 .sustainability-inner-main #secondary-nav .nav-link:first-child {
@@ -1106,4 +1238,198 @@ body.sustainability-site[data-nav-id='6'] .sustainability-inner-main .hero {
   background: url('/images/bullet.png') no-repeat left 7px;
   line-height: 1.5;
   margin-bottom: 0.35rem;
+}
+
+/* =========================================================
+   TECH-STYLE HOME REDESIGN  (scoped to home: data-nav-id='0')
+   ========================================================= */
+
+/* Fixed glass header */
+body.sustainability-site[data-nav-id='0'] .sustainability-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+body.sustainability-site[data-nav-id='0'] .sustainability-header .branding-wrapper {
+  background: rgba(16, 22, 36, 0.72);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid rgba(144, 155, 66, 0.4);
+  box-shadow: 0 8px 34px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Hero ---------- */
+body.sustainability-site[data-nav-id='0'] .hero.home {
+  padding: 158px 0 110px;
+  background:
+    linear-gradient(rgba(144, 155, 66, 0.06) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(144, 155, 66, 0.06) 1px, transparent 1px) 0 0 / 48px 48px,
+    radial-gradient(75% 120% at 82% -10%, rgba(0, 85, 67, 0.55), transparent 60%),
+    linear-gradient(135deg, #0e1426 0%, #1b2540 48%, #06352b 100%);
+}
+
+@media (max-width: 991px) {
+  body.sustainability-site[data-nav-id='0'] .hero.home {
+    padding: 132px 0 70px;
+  }
+}
+
+/* Eyebrow tech tag before the year */
+body.sustainability-site[data-nav-id='0'] .hero.home .wrapper::before {
+  content: 'ESG · REPORT';
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 3px;
+  color: #b4bb75;
+  padding: 6px 12px;
+  border: 1px solid rgba(180, 187, 117, 0.45);
+  border-radius: 999px;
+  background: rgba(144, 155, 66, 0.08);
+  margin-bottom: 6px;
+}
+
+body.sustainability-site[data-nav-id='0'] .hero.home .year {
+  font-weight: 200;
+  background: linear-gradient(120deg, #d3db97 0%, #8fb39b 45%, #6f9fc0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 10px 34px rgba(0, 85, 67, 0.55));
+}
+
+body.sustainability-site[data-nav-id='0'] .hero.home .hero-report-title {
+  color: #e6ebe8;
+}
+
+/* ---------- Nav section ---------- */
+body.sustainability-site[data-nav-id='0'] #homepage-nav {
+  position: relative;
+  padding: 90px 0 104px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(180deg, #0d1320 0%, #11182b 100%);
+}
+
+body.sustainability-site[data-nav-id='0'] #homepage-nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(144, 155, 66, 0.6), transparent);
+}
+
+/* per-card accent colors */
+body.sustainability-site[data-nav-id='0'] #homepage-nav .homepage-nav-col:nth-child(1) { --accent: #5d87a4; }
+body.sustainability-site[data-nav-id='0'] #homepage-nav .homepage-nav-col:nth-child(2) { --accent: #b4bb75; }
+body.sustainability-site[data-nav-id='0'] #homepage-nav .homepage-nav-col:nth-child(3) { --accent: #7aa7c7; }
+body.sustainability-site[data-nav-id='0'] #homepage-nav .homepage-nav-col:nth-child(4) { --accent: #c9b276; }
+body.sustainability-site[data-nav-id='0'] #homepage-nav .homepage-nav-col:nth-child(5) { --accent: #d2a881; }
+body.sustainability-site[data-nav-id='0'] #homepage-nav .homepage-nav-col:nth-child(6) { --accent: #aeb4b8; }
+
+/* card chrome */
+body.sustainability-site[data-nav-id='0'] .homepage-nav-link .card {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #161c2b;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+  min-height: 270px;
+}
+
+/* top accent hairline */
+body.sustainability-site[data-nav-id='0'] .homepage-nav-link .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent, #909b42);
+  opacity: 0.85;
+  z-index: 3;
+  transition: box-shadow 0.35s ease;
+}
+
+body.sustainability-site[data-nav-id='0'] .homepage-nav-link:hover .card,
+body.sustainability-site[data-nav-id='0'] .homepage-nav-link:focus-visible .card {
+  transform: translateY(-8px);
+  box-shadow:
+    0 22px 44px rgba(0, 0, 0, 0.55),
+    0 0 0 1px var(--accent, #909b42),
+    0 0 34px -6px var(--accent, #909b42);
+}
+
+body.sustainability-site[data-nav-id='0'] .homepage-nav-link:hover .card::before,
+body.sustainability-site[data-nav-id='0'] .homepage-nav-link:focus-visible .card::before {
+  opacity: 1;
+  box-shadow: 0 0 16px var(--accent, #909b42);
+}
+
+/* card body: drop diagonal clip, use clean dark fade for readability */
+body.sustainability-site[data-nav-id='0'] .homepage-nav-link .card-body {
+  clip-path: none !important;
+  display: block;
+  background:
+    linear-gradient(180deg, rgba(13, 19, 32, 0) 0%, rgba(13, 19, 32, 0.55) 50%, rgba(8, 12, 20, 0.94) 100%);
+  padding: 150px 24px 24px;
+  min-height: 270px;
+}
+
+body.sustainability-site[data-nav-id='0'] #homepage-nav .homepage-nav-col:not(:last-child) .homepage-nav-link:hover .card-body,
+body.sustainability-site[data-nav-id='0'] #homepage-nav .homepage-nav-col:not(:last-child) .homepage-nav-link:focus .card-body {
+  clip-path: none !important;
+}
+
+/* index number */
+body.sustainability-site[data-nav-id='0'] .homepage-nav-index {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  z-index: 3;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  color: var(--accent, #909b42);
+  text-shadow: 0 0 14px rgba(0, 0, 0, 0.6);
+}
+
+/* index + label + arrow alignment */
+body.sustainability-site[data-nav-id='0'] .homepage-nav-label {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+body.sustainability-site[data-nav-id='0'] .homepage-nav-arrow {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--accent, #909b42);
+  background: transparent;
+  color: var(--accent, #909b42);
+}
+
+body.sustainability-site[data-nav-id='0'] .homepage-nav-link:hover .homepage-nav-arrow,
+body.sustainability-site[data-nav-id='0'] .homepage-nav-link:focus-visible .homepage-nav-arrow {
+  background: var(--accent, #909b42);
+  color: #0d1320;
+}
+
+/* keep label clear of the arrow */
+body.sustainability-site[data-nav-id='0'] .homepage-nav-link .card-body {
+  padding-right: 76px;
 }

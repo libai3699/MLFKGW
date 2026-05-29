@@ -47,6 +47,18 @@ export default function Navigation({ isHome }) {
     setOpenDropdown((current) => (current === slug ? null : slug));
   };
 
+  const handleMouseEnter = (slug) => {
+    if (isDesktop) {
+      setOpenDropdown(slug);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (isDesktop) {
+      setOpenDropdown(null);
+    }
+  };
+
   const isActive = (item) => {
     if (item.slug === 'news') {
       return location.pathname === '/news';
@@ -123,6 +135,8 @@ export default function Navigation({ isHome }) {
               className={`nav-item ${item.children ? 'dropdown' : ''} ${
                 openDropdown === item.slug ? 'dropdown-open' : ''
               } ${isActive(item) ? 'active' : ''}`}
+              onMouseEnter={item.children ? () => handleMouseEnter(item.slug) : undefined}
+              onMouseLeave={item.children ? handleMouseLeave : undefined}
             >
               {item.children ? (
                 <>

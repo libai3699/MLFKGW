@@ -38,12 +38,17 @@ export default function SustainabilityHero() {
           </div>
           <motion.div
             className="hero-copy-col fade-in third"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.6, delay: 0.2 }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           >
-            {sustainabilityHomeIntro.map((paragraph) => (
-              <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+            {sustainabilityHomeIntro.map((paragraph, index) => (
+              <p
+                key={paragraph.slice(0, 32)}
+                className={index === 0 ? 'hero-lead' : undefined}
+              >
+                {paragraph}
+              </p>
             ))}
           </motion.div>
         </div>

@@ -80,7 +80,10 @@
   right: 0;
   width: 100%;
   z-index: 1000;
-  background: #414141;
+  background: rgba(26, 30, 30, 0.86);
+  -webkit-backdrop-filter: blur(13px) saturate(150%);
+  backdrop-filter: blur(13px) saturate(150%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.34);
 }
 
 .investor-site-header #color-bar {
@@ -114,9 +117,10 @@
 }
 
 .investor-site-header #branding {
-  background: #414141;
+  background: transparent;
   margin: 0;
   padding: 0;
+  border-bottom: 1px solid rgba(144, 155, 66, 0.38);
 }
 
 .investor-site-page--investment-professionals .investor-site-header #color-bar,

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { introText } from '../../data/siteData';
+import HeroParticles from './HeroParticles';
 
 export default function Hero() {
   return (
@@ -7,6 +8,7 @@ export default function Hero() {
       <div className="main-wrapper">
         <div className="main">
           <div className="content">
+            <HeroParticles />
             <div className="container-md">
               <div className="row">
                 <div className="col-12 col-xl-6 col-xxl-7">
